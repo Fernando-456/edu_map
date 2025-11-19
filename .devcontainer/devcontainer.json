@@ -5,13 +5,10 @@
     "dockerfile": "Dockerfile"
   },
 
-  "settings": {},
-
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-dotnettools.csharp",
-        "ms-vscode.cpptools",
         "ms-azuretools.vscode-docker"
       ],
       "settings": {
@@ -23,4 +20,4 @@
   "postCreateCommand": "dotnet --info",
 
   "remoteUser": "vscode"
-}}
+}
