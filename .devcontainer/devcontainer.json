@@ -1,17 +1,26 @@
 {
-  "name": "Windows Codespace",
-  "hostRequirements": {
-    "os": "windows"
+  "name": "EDUMAP DevContainer",
+
+  "build": {
+    "dockerfile": "Dockerfile"
   },
+
+  "settings": {},
+
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-dotnettools.csharp",
-        "ms-vscode.powershell"
-      ]
+        "ms-vscode.cpptools",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "editor.tabSize": 4
+      }
     }
   },
-  "settings": {
-    "terminal.integrated.defaultProfile.windows": "PowerShell"
-  }
-}
+
+  "postCreateCommand": "dotnet --info",
+
+  "remoteUser": "vscode"
+}}
