@@ -1,0 +1,17 @@
+{
+  "name": "Windows Codespace",
+  "hostRequirements": {
+    "os": "windows"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-vscode.powershell"
+      ]
+    }
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
+  }
+}
