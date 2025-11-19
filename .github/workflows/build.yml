@@ -28,3 +28,13 @@ jobs:
         name: EDUMAP-Build
         path: |
           **/bin/Release/
+
+    - name: Build Solution
+      run: msbuild "EDUMAP.sln" /t:Rebuild /p:Configuration=Release
+
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: EDUMAP-Build
+        path: |
+          **/bin/Release/
