@@ -1,0 +1,21 @@
+name: Build WinForms .NET Framework
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Build solution
+      run: |
+        msbuild "EDUMAP(version1).csproj" /t:Rebuild /p:Configuration=Release
