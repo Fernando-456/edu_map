@@ -51,7 +51,7 @@ namespace EDUMAP
 
             try
             {
-                mconexion.Open();
+                
                 string consulta = "INSERT INTO registro (Usuario, Email, Contraseña, Municipio) VALUES ('" + txtnombre.Text + "', '" + txtcorreo.Text + "', '" + txtcontraseña.Text + "', '" + txtmunicipio.Text + "')";
                 Global.usuario = txtnombre.Text;
                 string textoCorreo = txtcorreo.Text;
