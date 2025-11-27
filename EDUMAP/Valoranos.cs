@@ -76,6 +76,7 @@ namespace EDUMAP
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Gracias por tu opinion");
+                
             }
         }
 

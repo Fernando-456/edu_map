@@ -225,16 +225,44 @@ namespace EDUMAP
                         MessageBox.Show("Error al cargar la imagen: " + ex.Message);
                     }
                 }
-                linkLabel1.Visible = true;
-                // --- MOSTRAR LINK ---
-                linkLabel1.Text = link;
-                linkLabel1.Links.Clear();
-                linkLabel1.Links.Add(0, link.Length, link);
+                // Verificar si es número de teléfono
+                if (EsTelefono(link))
+                {
+                    MessageBox.Show("Número telefónico: " + link, "NO TIENE PAGINA",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return; // NO intenta abrir navegador ni cargar imagen
+                }
+                if (EsUrl(link))
+                {
+                    linkLabel1.Visible = true;
+                    // --- MOSTRAR LINK ---
+                    linkLabel1.Text = link;
+                    linkLabel1.Links.Clear();
+                    linkLabel1.Links.Add(0, link.Length, link);
+                    return;
+                }
+                
             }
             
 
         }
+        private bool EsTelefono(string texto)
+        {
+            // Quita espacios y guiones
+            string limpio = texto.Replace(" ", "").Replace("-", "");
 
+            // Si empieza con + y el resto son dígitos
+            if (limpio.StartsWith("+"))
+                return limpio.Substring(1).All(char.IsDigit);
+
+            // Si no tiene + pero son puros dígitos
+            return limpio.All(char.IsDigit);
+        }
+        private bool EsUrl(string ruta)
+        {
+            return ruta.StartsWith("http://") ||
+                   ruta.StartsWith("https://");
+        }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -252,6 +280,7 @@ namespace EDUMAP
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
             linkLabel1.LinkVisited = true;
             string url = e.Link.LinkData.ToString();
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
