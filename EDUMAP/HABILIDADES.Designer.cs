@@ -471,6 +471,7 @@
             this.radioButton1.TabIndex = 60;
             this.radioButton1.Text = "NO";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton8
             // 
@@ -564,9 +565,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(144, 392);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(452, 27);
+            this.label9.Size = new System.Drawing.Size(472, 27);
             this.label9.TabIndex = 14;
-            this.label9.Text = "¿Sabes interpretar personajes o emociones?";
+            this.label9.Text = "¿Sabes interpretar personajes y/o emociones?";
             // 
             // label4
             // 
@@ -584,9 +585,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(144, 196);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(534, 27);
+            this.label5.Size = new System.Drawing.Size(373, 27);
             this.label5.TabIndex = 12;
-            this.label5.Text = "¿Es buena tu habilidad para actuar o presentar arte?";
+            this.label5.Text = "¿Tu habilidad para actuar es buena?";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
@@ -605,9 +606,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(144, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(493, 27);
+            this.label2.Size = new System.Drawing.Size(513, 27);
             this.label2.TabIndex = 10;
-            this.label2.Text = "¿Te resulta fácil dibujar o tocar un instrumento?";
+            this.label2.Text = "¿Te resulta fácil dibujar y/o tocar un instrumento?";
             // 
             // label11
             // 
@@ -915,9 +916,9 @@
             this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(144, 294);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(659, 27);
+            this.label18.Size = new System.Drawing.Size(710, 27);
             this.label18.TabIndex = 43;
-            this.label18.Text = "¿Tienes habilidad para resolver problemas lógicos rápidamente?\n";
+            this.label18.Text = "¿Consideras que tu habilidad para resolver problemas lógicos es ágil?";
             // 
             // label19
             // 
@@ -945,9 +946,9 @@
             this.label21.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(144, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(546, 27);
+            this.label21.Size = new System.Drawing.Size(603, 27);
             this.label21.TabIndex = 40;
-            this.label21.Text = "¿Tienes habilidad para hablar en público y persuadir?";
+            this.label21.Text = "¿Tu habilidad para hablar en público y persuadir es buena?";
             // 
             // panel36
             // 
@@ -1160,6 +1161,7 @@
             this.radioButton19.TabIndex = 60;
             this.radioButton19.Text = "NO";
             this.radioButton19.UseVisualStyleBackColor = true;
+            this.radioButton19.CheckedChanged += new System.EventHandler(this.radioButton19_CheckedChanged);
             // 
             // radioButton30
             // 
@@ -1233,9 +1235,9 @@
             this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(145, 396);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(440, 27);
+            this.label27.Size = new System.Drawing.Size(801, 27);
             this.label27.TabIndex = 65;
-            this.label27.Text = "¿Eres hábil para tareas largas y detalladas?";
+            this.label27.Text = "¿Consideras que tu habilidad para realizar tareas largas y detalladas es buena?";
             // 
             // label28
             // 
@@ -1243,9 +1245,9 @@
             this.label28.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(145, 297);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(468, 27);
+            this.label28.Size = new System.Drawing.Size(496, 27);
             this.label28.TabIndex = 64;
-            this.label28.Text = "¿Son fáciles para ti las ecuaciones complejas?\n";
+            this.label28.Text = " ¿Te resulta fácil resolver ecuaciones complejas?";
             // 
             // label29
             // 
@@ -1253,9 +1255,9 @@
             this.label29.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(145, 198);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(496, 54);
+            this.label29.Size = new System.Drawing.Size(625, 27);
             this.label29.TabIndex = 63;
-            this.label29.Text = "¿Te es fácil comprender y escuchar a los demás?\r\n(medicina / salud)\r\n";
+            this.label29.Text = "¿Te es fácil comprender temas relacionados con la medicina?";
             // 
             // label30
             // 
@@ -1273,9 +1275,9 @@
             this.label31.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(145, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(506, 27);
+            this.label31.Size = new System.Drawing.Size(461, 27);
             this.label31.TabIndex = 61;
-            this.label31.Text = "¿Te es difícil la redacción en informes científicos?\n";
+            this.label31.Text = "¿Se te dificulta redactar informes científicos?";
             this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // panel37
@@ -1562,9 +1564,9 @@
             this.label37.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(145, 396);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(579, 27);
+            this.label37.Size = new System.Drawing.Size(585, 27);
             this.label37.TabIndex = 86;
-            this.label37.Text = "¿Es buena tu habilidad para exponer temas académicos?";
+            this.label37.Text = "¿Tu habilidad para exponer temas académicos es buena?";
             // 
             // label38
             // 
@@ -1592,9 +1594,9 @@
             this.label40.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.Location = new System.Drawing.Point(145, 99);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(611, 27);
+            this.label40.Size = new System.Drawing.Size(623, 27);
             this.label40.TabIndex = 83;
-            this.label40.Text = "¿Te resulta fácil poner atención cuando hablas con alguien?\n";
+            this.label40.Text = "¿Te resulta fácil prestar atención cuando hablas con alguien?\r\n";
             // 
             // label41
             // 
@@ -1602,9 +1604,9 @@
             this.label41.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.Location = new System.Drawing.Point(145, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(374, 27);
+            this.label41.Size = new System.Drawing.Size(403, 27);
             this.label41.TabIndex = 82;
-            this.label41.Text = "¿Te consideras hábil para socializar?\n";
+            this.label41.Text = "¿Tu habilidad para socializar es buena?";
             this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // panel38
@@ -1756,6 +1758,7 @@
             this.radioButton43.TabIndex = 60;
             this.radioButton43.Text = "NO";
             this.radioButton43.UseVisualStyleBackColor = true;
+            this.radioButton43.CheckedChanged += new System.EventHandler(this.radioButton43_CheckedChanged);
             // 
             // radioButton46
             // 
@@ -1891,9 +1894,9 @@
             this.label47.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(145, 396);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(490, 27);
+            this.label47.Size = new System.Drawing.Size(644, 27);
             this.label47.TabIndex = 107;
-            this.label47.Text = "¿Es buena tu habilidad para trabajar en equipo?";
+            this.label47.Text = "¿Tu habilidad para trabajar en equipo y comunicarte es buena?";
             // 
             // label48
             // 
@@ -1911,9 +1914,9 @@
             this.label49.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.Location = new System.Drawing.Point(145, 198);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(411, 27);
+            this.label49.Size = new System.Drawing.Size(424, 27);
             this.label49.TabIndex = 105;
-            this.label49.Text = "¿Se te dificulta para ti el dibujo técnico?\n";
+            this.label49.Text = "¿Te resulta complicado el dibujo técnico?";
             // 
             // label50
             // 
@@ -1931,9 +1934,9 @@
             this.label51.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.Location = new System.Drawing.Point(145, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(404, 54);
+            this.label51.Size = new System.Drawing.Size(748, 27);
             this.label51.TabIndex = 103;
-            this.label51.Text = "¿Es buena tu habilidad para identificar \r\nproblemas de mecanismos o sistemas?\r\n";
+            this.label51.Text = "¿Tu habilidad para identificar fallas en mecanismos o sistemas es buena?";
             // 
             // panel39
             // 
@@ -2084,6 +2087,7 @@
             this.radioButton53.TabIndex = 60;
             this.radioButton53.Text = "NO";
             this.radioButton53.UseVisualStyleBackColor = true;
+            this.radioButton53.CheckedChanged += new System.EventHandler(this.radioButton53_CheckedChanged);
             // 
             // radioButton56
             // 
@@ -2219,9 +2223,9 @@
             this.label57.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.Location = new System.Drawing.Point(145, 396);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(620, 27);
+            this.label57.Size = new System.Drawing.Size(745, 27);
             this.label57.TabIndex = 128;
-            this.label57.Text = "¿Te resulta fácil hablar para auditorias o temas de negocios?";
+            this.label57.Text = "¿Te resulta fácil comprender temas relacionados con el área de finanzas?";
             // 
             // label58
             // 
@@ -2240,9 +2244,9 @@
             this.label59.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.Location = new System.Drawing.Point(145, 198);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(611, 27);
+            this.label59.Size = new System.Drawing.Size(487, 27);
             this.label59.TabIndex = 126;
-            this.label59.Text = "¿Es buena tu habilidad para redactar informes con claridad?";
+            this.label59.Text = "¿Se te dificulta redactar informes con claridad? ";
             // 
             // label60
             // 
@@ -2444,6 +2448,7 @@
             this.radioButton63.TabIndex = 60;
             this.radioButton63.Text = "NO";
             this.radioButton63.UseVisualStyleBackColor = true;
+            this.radioButton63.CheckedChanged += new System.EventHandler(this.radioButton63_CheckedChanged);
             // 
             // radioButton68
             // 
@@ -2558,10 +2563,9 @@
             this.label68.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.Location = new System.Drawing.Point(145, 297);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(487, 54);
+            this.label68.Size = new System.Drawing.Size(786, 27);
             this.label68.TabIndex = 148;
-            this.label68.Text = "¿Es buena tu habilidad para trabajar en equipo \r\nen un proyecto de investigación " +
-    "legal?\r\n";
+            this.label68.Text = "¿Te resulta sencillo realizar investigaciones relacionadas con el ámbito legal?";
             // 
             // label69
             // 
@@ -2569,10 +2573,9 @@
             this.label69.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.Location = new System.Drawing.Point(145, 198);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(633, 54);
+            this.label69.Size = new System.Drawing.Size(770, 27);
             this.label69.TabIndex = 147;
-            this.label69.Text = "¿Es buena tu habilidad para la claridad y precisión en la\r\nredacción de informes " +
-    "(memorandos o dictámenes jurídicos)?\r\n";
+            this.label69.Text = "¿Dominas la redacción clara y precisa de informes y memorandos jurídicos?";
             // 
             // label70
             // 
@@ -2580,10 +2583,10 @@
             this.label70.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.Location = new System.Drawing.Point(145, 99);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(558, 54);
+            this.label70.Size = new System.Drawing.Size(898, 54);
             this.label70.TabIndex = 146;
-            this.label70.Text = "¿Se te dificulta identificar fallas o contradicciones \r\nlógicas en los argumentos" +
-    " o textos de otras personas?\r\n";
+            this.label70.Text = "¿Se te dificulta identificar fallas o contradicciones lógicas en los argumentos o" +
+    " textos de otras personas?\r\n";
             // 
             // label71
             // 
@@ -2591,10 +2594,10 @@
             this.label71.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.Location = new System.Drawing.Point(145, 0);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(532, 54);
+            this.label71.Size = new System.Drawing.Size(896, 27);
             this.label71.TabIndex = 145;
-            this.label71.Text = "¿Te resulta fácil la lectura y análisis de expedientes \r\njudiciales o textos lega" +
-    "les extensos?\r\n";
+            this.label71.Text = "¿Te resulta fácil la lectura y análisis de expedientes judiciales o textos legale" +
+    "s extensos?\r\n";
             // 
             // panel41
             // 

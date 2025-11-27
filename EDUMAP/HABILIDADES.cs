@@ -103,18 +103,7 @@ namespace EDUMAP
 
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb.Checked)
-            {
-                // Verifica si ya estaba contado antes
-                if (!rb.Tag?.ToString().Equals("contado") ?? true)
-                {
-                    // Aquí sumas al conteo
-                    // Ejemplo: conteo++;
-                    Global.SI_A += 1;
-                    rb.Tag = "contado"; // Marca que ya fue contado
-                }
-            }
+            
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
@@ -252,18 +241,7 @@ namespace EDUMAP
 
         private void radioButton30_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb.Checked)
-            {
-                // Verifica si ya estaba contado antes
-                if (!rb.Tag?.ToString().Equals("contado") ?? true)
-                {
-                    // Aquí sumas al conteo
-                    // Ejemplo: conteo++;
-                    Global.SI_C += 1;
-                    rb.Tag = "contado"; // Marca que ya fue contado
-                }
-            }
+            
         }
 
         private void radioButton28_CheckedChanged(object sender, EventArgs e)
@@ -444,18 +422,7 @@ namespace EDUMAP
 
         private void radioButton46_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb.Checked)
-            {
-                // Verifica si ya estaba contado antes
-                if (!rb.Tag?.ToString().Equals("contado") ?? true)
-                {
-                    // Aquí sumas al conteo
-                    // Ejemplo: conteo++;
-                    Global.SI_D += 1;
-                    rb.Tag = "contado"; // Marca que ya fue contado
-                }
-            }
+            
         }
 
         private void radioButton44_CheckedChanged(object sender, EventArgs e)
@@ -524,18 +491,7 @@ namespace EDUMAP
 
         private void radioButton56_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb.Checked)
-            {
-                // Verifica si ya estaba contado antes
-                if (!rb.Tag?.ToString().Equals("contado") ?? true)
-                {
-                    // Aquí sumas al conteo
-                    // Ejemplo: conteo++;
-                    Global.SI_F += 1;
-                    rb.Tag = "contado"; // Marca que ya fue contado
-                }
-            }
+            
         }
 
         private void radioButton54_CheckedChanged(object sender, EventArgs e)
@@ -588,18 +544,7 @@ namespace EDUMAP
 
         private void radioButton68_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb.Checked)
-            {
-                // Verifica si ya estaba contado antes
-                if (!rb.Tag?.ToString().Equals("contado") ?? true)
-                {
-                    // Aquí sumas al conteo
-                    // Ejemplo: conteo++;
-                    Global.SI_L += 1;
-                    rb.Tag = "contado"; // Marca que ya fue contado
-                }
-            }
+            
         }
 
         private void radioButton66_CheckedChanged(object sender, EventArgs e)
@@ -658,6 +603,86 @@ namespace EDUMAP
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                // Verifica si ya estaba contado antes
+                if (!rb.Tag?.ToString().Equals("contado") ?? true)
+                {
+                    // Aquí sumas al conteo
+                    // Ejemplo: conteo++;
+                    Global.SI_A += 1;
+                    rb.Tag = "contado"; // Marca que ya fue contado
+                }
+            }
+        }
+
+        private void radioButton19_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                // Verifica si ya estaba contado antes
+                if (!rb.Tag?.ToString().Equals("contado") ?? true)
+                {
+                    // Aquí sumas al conteo
+                    // Ejemplo: conteo++;
+                    Global.SI_C += 1;
+                    rb.Tag = "contado"; // Marca que ya fue contado
+                }
+            }
+        }
+
+        private void radioButton43_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                // Verifica si ya estaba contado antes
+                if (!rb.Tag?.ToString().Equals("contado") ?? true)
+                {
+                    // Aquí sumas al conteo
+                    // Ejemplo: conteo++;
+                    Global.SI_D += 1;
+                    rb.Tag = "contado"; // Marca que ya fue contado
+                }
+            }
+        }
+
+        private void radioButton53_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                // Verifica si ya estaba contado antes
+                if (!rb.Tag?.ToString().Equals("contado") ?? true)
+                {
+                    // Aquí sumas al conteo
+                    // Ejemplo: conteo++;
+                    Global.SI_F += 1;
+                    rb.Tag = "contado"; // Marca que ya fue contado
+                }
+            }
+        }
+
+        private void radioButton63_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                // Verifica si ya estaba contado antes
+                if (!rb.Tag?.ToString().Equals("contado") ?? true)
+                {
+                    // Aquí sumas al conteo
+                    // Ejemplo: conteo++;
+                    Global.SI_L += 1;
+                    rb.Tag = "contado"; // Marca que ya fue contado
+                }
+            }
         }
     }
 }
