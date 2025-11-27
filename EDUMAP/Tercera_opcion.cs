@@ -238,5 +238,11 @@ namespace EDUMAP
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = false;
+            abrirForm(new Segunda_opcion());
+        }
     }
 }

@@ -631,7 +631,7 @@ namespace EDUMAP
 
         private void button6_Click_1(object sender, EventArgs e)
         {
-            panel45.Visible = false;
+            
             abrirForm(new Resultados());
         }
 

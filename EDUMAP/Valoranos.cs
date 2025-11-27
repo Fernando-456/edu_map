@@ -78,5 +78,15 @@ namespace EDUMAP
                 MessageBox.Show("Gracias por tu opinion");
             }
         }
+
+        private void rdb1_4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -87,7 +87,7 @@ namespace EDUMAP
         }
         private void button6_Click(object sender, EventArgs e)
         {
-            panel36.Visible = false;
+            
             abrirForm(new HABILIDADES());
         }
         private void radioButton20_CheckedChanged(object sender, EventArgs e)
@@ -676,6 +676,11 @@ namespace EDUMAP
         }
 
         private void panel36_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void radioButton39_CheckedChanged(object sender, EventArgs e)
         {
 
         }

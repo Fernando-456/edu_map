@@ -31,6 +31,7 @@ namespace EDUMAP
         public static int SI_F;
         public static int SI_L;
         public static string usuario;
+        public static string contraseña;
         public static Boolean BD;
     }
 }

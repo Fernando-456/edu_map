@@ -46,7 +46,7 @@ namespace EDUMAP
         }
         private void button6_Click(object sender, EventArgs e)
         {
-            panel44.Visible = false;
+            
             abrirForm(new OCUPACIONES());
         }
 
@@ -651,6 +651,11 @@ namespace EDUMAP
         }
 
         private void panel44_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

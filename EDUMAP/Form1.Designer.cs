@@ -71,6 +71,7 @@
             // 
             this.btninicio.AutoEllipsis = true;
             this.btninicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.btninicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btninicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btninicio.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btninicio.ForeColor = System.Drawing.Color.White;
@@ -86,6 +87,7 @@
             // 
             this.btnregistro.AutoSize = true;
             this.btnregistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(204)))));
+            this.btnregistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnregistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnregistro.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistro.ForeColor = System.Drawing.Color.White;
@@ -128,6 +130,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

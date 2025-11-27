@@ -117,7 +117,7 @@ namespace EDUMAP
         }
         private void button2_Click(object sender, EventArgs e)
             {
-            flowLayoutPanel1.Visible = false;
+            
             abrirForm(new Primera_opcion());
         }
 
@@ -142,6 +142,11 @@ namespace EDUMAP
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

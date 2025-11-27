@@ -6,12 +6,21 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace EDUMAP
 {
     public partial class Form1 : Form
     {
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        const int SW_HIDE = 0;
         public Form1()
         {
             InitializeComponent();
@@ -25,11 +34,44 @@ namespace EDUMAP
       
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            
-            
+            OcultarVisualStudio();
         }
-        
+        void OcultarVisualStudio()
+        {
+            // Clases típicas de ventana del IDE
+            string[] classNames = {
+            "VisualStudioMainWindow",   // VS 2022 / 2019
+            "Qt5QWindowIcon",           // VS preview or special skins
+            null                        // fallback: buscar por título
+        };
+
+            // Intento 1: buscar por clase
+            foreach (var className in classNames)
+            {
+                IntPtr hWnd = FindWindow(className, null);
+                if (hWnd != IntPtr.Zero)
+                {
+                    ShowWindow(hWnd, SW_HIDE);
+                    return;
+                }
+            }
+
+            // Intento 2: búsqueda por título parcial
+            Process[] procesos = Process.GetProcesses();
+            foreach (var p in procesos)
+            {
+                try
+                {
+                    if (p.MainWindowTitle.Contains("Visual Studio"))
+                    {
+                        ShowWindow(p.MainWindowHandle, SW_HIDE);
+                        return;
+                    }
+                }
+                catch { }
+            }
+        }
+
         private void FormResize()
         {
             if (this.WindowState == FormWindowState.Maximized)
@@ -73,3 +115,4 @@ namespace EDUMAP
         }
     }
 }
+

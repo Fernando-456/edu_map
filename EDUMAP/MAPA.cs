@@ -41,17 +41,22 @@ namespace EDUMAP
             using (MySqlConnection con = new MySqlConnection(conexion))
             {
                 con.Open();
-                string query = "SELECT nombre, ruta_imagen FROM universidades";
+                string query = "SELECT nombre, ruta_imagen, pagina_web FROM universidades";
+
                 MySqlDataAdapter da = new MySqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
                 dataGridView2.DataSource = dt;
 
-                // Opcional: ocultar la columna de la URL
-                dataGridView2.Columns["ruta_imagen"].Visible = false;
-                
+                // Mostrar columnas bonitas
                 dataGridView2.Columns["nombre"].HeaderText = "Universidad";
+
+                // Ocultar la ruta de imagen (si no quieres verla en la tabla)
+                dataGridView2.Columns["ruta_imagen"].Visible = false;
+
+                // Mostrar el link
+                dataGridView2.Columns["pagina_web"].Visible = false;
             }
         }
         private void CargarCarreras()
@@ -150,7 +155,7 @@ namespace EDUMAP
 
                 if (unionQuery == "")
                 {
-                    MessageBox.Show("No se encontraron resultados");
+                    MessageBox.Show("Pruebe con otro municipio y/o otra carrera");
                     dataGridView1.DataSource = null;
                     return;
                 }
@@ -184,17 +189,6 @@ namespace EDUMAP
             MostrarDatos();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            switch (comboBoxcarreras.Text)
-            {
-                case null:
-                    MessageBox.Show("Por favor, seleccione una carrera.");
-                    return;
-               
-            }
-            
-        }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -211,6 +205,7 @@ namespace EDUMAP
             if (e.RowIndex >= 0)
             {
                 string ruta = dataGridView2.Rows[e.RowIndex].Cells["ruta_imagen"].Value.ToString();
+                string link = dataGridView1.Rows[e.RowIndex].Cells["pagina_web"].Value.ToString();
 
                 if (!string.IsNullOrEmpty(ruta))
                 {
@@ -230,12 +225,38 @@ namespace EDUMAP
                         MessageBox.Show("Error al cargar la imagen: " + ex.Message);
                     }
                 }
+                // --- MOSTRAR LINK ---
+                linkLabel1.Text = link;
+                linkLabel1.Links.Clear();
+                linkLabel1.Links.Add(0, link.Length, link);
             }
+            
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string url = e.Link.LinkData.ToString();
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
         }
     }
 }

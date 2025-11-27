@@ -30,7 +30,25 @@ namespace EDUMAP
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            mconexion.Open();
+
+            // 1. Verificar si el usuario ya existe
+            string consultaUsuario = "SELECT Usuario FROM registro WHERE Usuario = @Usuario";
+
+            using (MySqlCommand cmdVerificar = new MySqlCommand(consultaUsuario, mconexion))
+            {
+                cmdVerificar.Parameters.AddWithValue("@Usuario", txtnombre.Text);
+
+                string existe = Convert.ToString(cmdVerificar.ExecuteScalar());
+
+                // 2. Si el usuario ya existe → mostrar mensaje
+                if (existe == txtnombre.Text)
+                {
+                    MessageBox.Show("Este usuario ya existe. Elija otro nombre de usuario.");
+                    return;
+                }
+            }
+
             try
             {
                 mconexion.Open();
@@ -76,6 +94,13 @@ namespace EDUMAP
         private void txtnombre_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            this.Hide();
         }
     }
 }

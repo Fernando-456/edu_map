@@ -23,27 +23,11 @@ namespace EDUMAP
         }
         private Form FormActual = null;
         // Agregar este campo a la clase MAPA
-        private Size formSize;
-        private void FormResize()
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                // Ajustar el tamaño y la posición de los controles para pantalla maximizada
-            }
-            else
-            {
-                // Ajustar el tamaño y la posición de los controles para pantalla normal
-            }
-        }
+        
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            originalFormSize = this.Size;
-            originalLabelSize = label1.Size;
-            originalLabelFontSize = label1.Font.Size;
-
-            originalLabelSize = label2.Size;
-            originalLabelFontSize = label2.Font.Size;
+            
         }
         private void abrirForm (Form form)
         {
@@ -62,13 +46,63 @@ namespace EDUMAP
 
 
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
+
+
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            // Solución: Necesitas una instancia de Valoranos para llamar a Close()
+            // Si tienes una instancia abierta, ciérrala. Por ejemplo, si la abriste con abrirForm(new Valoranos()),
+            // puedes buscarla en los controles del panel.
+            foreach (Control ctrl in this.panel1.Controls)
+            {
+                if (ctrl is Valoranos valoranosForm)
+                {
+                    valoranosForm.Close();
+                    break;
+                }
+            }
+            flowTITULO.Visible = false;
+            abrirForm(new Inicio());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            
+            flowTITULO.Visible = false;
+            abrirForm(new Valoranos());
+        }
+
+        private void Menu_Resize(object sender, EventArgs e)
+        {
+        
+
+        }
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             flowTITULO.Visible = false;
             abrirForm(new INTERESES());
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            flowTITULO.Visible = false;
+            abrirForm(new MAPA());
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
         {
             string conexionString = "Server=89.116.159.185;Database=EduMap;Uid=Fernando_BD;Pwd=1209;";
 
@@ -127,7 +161,7 @@ namespace EDUMAP
                             // Enviar los valores al Form2
                             flowTITULO.Visible = false;
                             abrirForm(new Resultados());
-                            
+
                         }
                         else
                         {
@@ -142,75 +176,10 @@ namespace EDUMAP
             }
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            // Solución: Necesitas una instancia de Valoranos para llamar a Close()
-            // Si tienes una instancia abierta, ciérrala. Por ejemplo, si la abriste con abrirForm(new Valoranos()),
-            // puedes buscarla en los controles del panel.
-            foreach (Control ctrl in this.panel1.Controls)
-            {
-                if (ctrl is Valoranos valoranosForm)
-                {
-                    valoranosForm.Close();
-                    break;
-                }
-            }
-            flowTITULO.Visible = false;
-            abrirForm(new Inicio());
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            
-            flowTITULO.Visible = false;
-            abrirForm(new Valoranos());
-        }
-
-        private void Menu_Resize(object sender, EventArgs e)
-        {
-            float xRatio = (float)this.Width / originalFormSize.Width;
-            float yRatio = (float)this.Height / originalFormSize.Height;
-
-            // Escalar tamaño del Label
-            int newWidth = (int)(originalLabelSize.Width * xRatio);
-            int newHeight = (int)(originalLabelSize.Height * yRatio);
-            label1.Size = new Size(newWidth, newHeight);
-            label2.Size = new Size(newWidth, newHeight);
-
-            // Escalar fuente (opcional)
-            FormResize();
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void pictureBox5_Click_1(object sender, EventArgs e)
         {
             flowTITULO.Visible = false;
-            abrirForm(new MAPA());
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
+            abrirForm(new Carreras());
         }
     }
 }
