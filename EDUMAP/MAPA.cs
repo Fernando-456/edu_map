@@ -205,7 +205,7 @@ namespace EDUMAP
             if (e.RowIndex >= 0)
             {
                 string ruta = dataGridView2.Rows[e.RowIndex].Cells["ruta_imagen"].Value.ToString();
-                string link = dataGridView1.Rows[e.RowIndex].Cells["pagina_web"].Value.ToString();
+                string link = dataGridView2.Rows[e.RowIndex].Cells["pagina_web"].Value.ToString();
 
                 if (!string.IsNullOrEmpty(ruta))
                 {
@@ -225,6 +225,7 @@ namespace EDUMAP
                         MessageBox.Show("Error al cargar la imagen: " + ex.Message);
                     }
                 }
+                linkLabel1.Visible = true;
                 // --- MOSTRAR LINK ---
                 linkLabel1.Text = link;
                 linkLabel1.Links.Clear();
@@ -251,6 +252,7 @@ namespace EDUMAP
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            linkLabel1.LinkVisited = true;
             string url = e.Link.LinkData.ToString();
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
             {
