@@ -78,7 +78,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(317, 742);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(317, 757);
             this.flowLayoutPanel1.TabIndex = 14;
             // 
             // pictureBox2
@@ -98,7 +98,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
-            this.label2.Location = new System.Drawing.Point(3, 75);
+            this.label2.Location = new System.Drawing.Point(3, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(542, 37);
             this.label2.TabIndex = 16;
@@ -111,7 +111,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
-            this.label3.Location = new System.Drawing.Point(3, 225);
+            this.label3.Location = new System.Drawing.Point(3, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(720, 37);
             this.label3.TabIndex = 18;
@@ -124,7 +124,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
-            this.label4.Location = new System.Drawing.Point(3, 525);
+            this.label4.Location = new System.Drawing.Point(3, 539);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(868, 74);
             this.label4.TabIndex = 22;
@@ -138,7 +138,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
-            this.label5.Location = new System.Drawing.Point(3, 375);
+            this.label5.Location = new System.Drawing.Point(3, 385);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(854, 74);
             this.label5.TabIndex = 20;
@@ -202,7 +202,7 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.button1);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(317, 682);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(317, 697);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1132, 60);
@@ -229,7 +229,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(317, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1132, 682);
+            this.panel5.Size = new System.Drawing.Size(1132, 697);
             this.panel5.TabIndex = 30;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -259,7 +259,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1132, 682);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1132, 697);
             this.tableLayoutPanel1.TabIndex = 30;
             // 
             // flowLayoutPanel6
@@ -269,9 +269,9 @@
             this.flowLayoutPanel6.Controls.Add(this.rdb4_3);
             this.flowLayoutPanel6.Controls.Add(this.rdb4_4);
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 603);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 619);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(1126, 76);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(1126, 75);
             this.flowLayoutPanel6.TabIndex = 31;
             // 
             // rdb4_2
@@ -333,9 +333,9 @@
             this.flowLayoutPanel5.Controls.Add(this.rdb3_4);
             this.flowLayoutPanel5.Controls.Add(this.rdb3_3);
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 453);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 465);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(1126, 69);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(1126, 71);
             this.flowLayoutPanel5.TabIndex = 31;
             // 
             // rdb3_2
@@ -397,9 +397,9 @@
             this.flowLayoutPanel4.Controls.Add(this.rdb2_3);
             this.flowLayoutPanel4.Controls.Add(this.rdb2_4);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 303);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 311);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1126, 69);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1126, 71);
             this.flowLayoutPanel4.TabIndex = 31;
             // 
             // rdb2_2
@@ -461,9 +461,9 @@
             this.flowLayoutPanel3.Controls.Add(this.rdb1_2);
             this.flowLayoutPanel3.Controls.Add(this.rdb1_4);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 153);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 157);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1126, 69);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1126, 71);
             this.flowLayoutPanel3.TabIndex = 31;
             // 
             // label1
@@ -477,7 +477,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1126, 75);
+            this.label1.Size = new System.Drawing.Size(1126, 77);
             this.label1.TabIndex = 32;
             this.label1.Text = "Test de Satisfacción";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -486,7 +486,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1449, 742);
+            this.ClientSize = new System.Drawing.Size(1449, 757);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);

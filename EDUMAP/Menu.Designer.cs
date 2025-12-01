@@ -139,7 +139,7 @@
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(322, 641);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(322, 651);
             this.flowLayoutPanel6.TabIndex = 29;
             // 
             // button2
@@ -163,7 +163,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(322, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1431, 641);
+            this.panel1.Size = new System.Drawing.Size(1431, 651);
             this.panel1.TabIndex = 33;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -183,7 +183,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1431, 515);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1431, 525);
             this.tableLayoutPanel1.TabIndex = 34;
             // 
             // pictureBox4
@@ -191,9 +191,9 @@
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 260);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 265);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(709, 252);
+            this.pictureBox4.Size = new System.Drawing.Size(709, 257);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 20;
             this.pictureBox4.TabStop = false;
@@ -204,9 +204,9 @@
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(718, 260);
+            this.pictureBox5.Location = new System.Drawing.Point(718, 265);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(710, 252);
+            this.pictureBox5.Size = new System.Drawing.Size(710, 257);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
@@ -219,7 +219,7 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(718, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(710, 251);
+            this.pictureBox3.Size = new System.Drawing.Size(710, 256);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -232,7 +232,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(709, 251);
+            this.pictureBox2.Size = new System.Drawing.Size(709, 256);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
@@ -258,7 +258,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(220)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1753, 641);
+            this.ClientSize = new System.Drawing.Size(1753, 651);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel6);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
