@@ -84,7 +84,7 @@ namespace EDUMAP
             int inicioX = (this.Width - anchoTotal) / 2;
 
             objetivoCentro1 = inicioX;
-            objetivoCentro2 = inicioX + titulo1.Width - 15;
+            objetivoCentro2 = inicioX + titulo1.Width - 14;
         }
         private void IniciarAnimaciones()
         {

@@ -211,7 +211,7 @@ namespace EDUMAP
 
         private void pictureBox3_Click(object sender, System.EventArgs e)
         {
-            string conexionString = "Server=89.116.159.185;Database=EduMap;Uid=Fernando_BD;Pwd=1209;";
+            string conexionString = "Server=62.72.5.62;Database=EduMap;Uid=fer;Pwd=1234;";
 
             using (MySqlConnection conexion = new MySqlConnection(conexionString))
             {
@@ -302,7 +302,7 @@ namespace EDUMAP
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
-            string conexionString = "Server=89.116.159.185;Database=EduMap;Uid=Fernando_BD;Pwd=1209;";
+            string conexionString = "Server=62.72.5.62;Database=EduMap;Uid=fer;Pwd=1234;";
 
             using (MySqlConnection conexion = new MySqlConnection(conexionString))
             {

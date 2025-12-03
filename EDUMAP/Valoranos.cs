@@ -57,7 +57,7 @@ namespace EDUMAP
                 return;
             }
 
-            string conexion = "server=89.116.159.185; database=EduMap; uid=Fernando_BD; pwd=1209;";
+            string conexion = "server=62.72.5.62; database=EduMap; uid=fer; pwd=1234;";
             
             using (MySqlConnection conn = new MySqlConnection(conexion))
             {

@@ -15,7 +15,7 @@ namespace EDUMAP
     public partial class login : Form
     {
 
-        string conexionBD = "Server=89.116.159.185;Database=EduMap;Uid=Fernando_BD;Pwd=1209;";
+        string conexionBD = "Server=62.72.5.62;Database=EduMap;Uid=fer;Pwd=1234;";
 
         public login()
         {

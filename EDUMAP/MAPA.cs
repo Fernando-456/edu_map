@@ -19,7 +19,7 @@ namespace EDUMAP
 {
     public partial class MAPA : Form
     {
-        string conexion = "Server=89.116.159.185;Database=EduMap;Uid=Fernando_BD;Pwd=1209;";
+        string conexion = "Server=62.72.5.62;Database=EduMap;Uid=fer;Pwd=1234;";
         string[] tablas = { "campo_artistico", "campo_emprendimiento", "campo_cientifico", "campo_desarrollo", "campo_leyes", "campo_finanzas", "campo_social" };
         public MAPA()
         {

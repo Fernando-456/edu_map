@@ -13,10 +13,10 @@ namespace EDUMAP
 
         public static MySqlConnection ConexionDB()
         {
-            string server = "89.116.159.185";
+            string server = "62.72.5.62";
             string database = "EduMap";
-            string user = "Fernando_BD";
-            string password = "1209";
+            string user = "fer";
+            string password = "1234";
             string cadenaconexion = $"server={server}; database={database}; User={user}; Password={password};";
             try
             {
