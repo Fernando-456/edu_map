@@ -58,6 +58,8 @@ namespace EDUMAP
 
                 // Mostrar el link
                 dataGridView2.Columns["pagina_web"].Visible = false;
+
+                
             }
         }
         private void CargarCarreras()
@@ -179,8 +181,9 @@ namespace EDUMAP
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
-                
-                
+                dataGridView1.Columns["tabla_origen"].Visible = false;
+
+
             }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
