@@ -356,7 +356,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1406, 493);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1406, 481);
             this.tableLayoutPanel2.TabIndex = 177;
             // 
             // panel6
@@ -364,9 +364,9 @@
             this.panel6.Controls.Add(this.radioButton7);
             this.panel6.Controls.Add(this.radioButton2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(1045, 395);
+            this.panel6.Location = new System.Drawing.Point(1045, 387);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(358, 95);
+            this.panel6.Size = new System.Drawing.Size(358, 91);
             this.panel6.TabIndex = 25;
             // 
             // radioButton7
@@ -395,9 +395,9 @@
             this.panel5.Controls.Add(this.radioButton5);
             this.panel5.Controls.Add(this.radioButton4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(1045, 297);
+            this.panel5.Location = new System.Drawing.Point(1045, 291);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(358, 92);
+            this.panel5.Size = new System.Drawing.Size(358, 90);
             this.panel5.TabIndex = 25;
             // 
             // radioButton5
@@ -426,9 +426,9 @@
             this.panel4.Controls.Add(this.radioButton3);
             this.panel4.Controls.Add(this.radioButton6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(1045, 199);
+            this.panel4.Location = new System.Drawing.Point(1045, 195);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(358, 92);
+            this.panel4.Size = new System.Drawing.Size(358, 90);
             this.panel4.TabIndex = 25;
             // 
             // radioButton3
@@ -457,9 +457,9 @@
             this.panel3.Controls.Add(this.radioButton1);
             this.panel3.Controls.Add(this.radioButton8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(1045, 101);
+            this.panel3.Location = new System.Drawing.Point(1045, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(358, 92);
+            this.panel3.Size = new System.Drawing.Size(358, 90);
             this.panel3.TabIndex = 25;
             // 
             // radioButton1
@@ -491,7 +491,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(1045, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(358, 92);
+            this.panel2.Size = new System.Drawing.Size(358, 90);
             this.panel2.TabIndex = 24;
             // 
             // radioButton61
@@ -520,9 +520,9 @@
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Right;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(99, 294);
+            this.label10.Location = new System.Drawing.Point(99, 288);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 98);
+            this.label10.Size = new System.Drawing.Size(39, 96);
             this.label10.TabIndex = 38;
             this.label10.Text = "4.-";
             // 
@@ -531,9 +531,9 @@
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Right;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(99, 196);
+            this.label8.Location = new System.Drawing.Point(99, 192);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 98);
+            this.label8.Size = new System.Drawing.Size(39, 96);
             this.label8.TabIndex = 37;
             this.label8.Text = "3.-";
             // 
@@ -542,9 +542,9 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(99, 98);
+            this.label7.Location = new System.Drawing.Point(99, 96);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 98);
+            this.label7.Size = new System.Drawing.Size(39, 96);
             this.label7.TabIndex = 36;
             this.label7.Text = "2.-";
             // 
@@ -555,7 +555,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(99, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 98);
+            this.label6.Size = new System.Drawing.Size(39, 96);
             this.label6.TabIndex = 25;
             this.label6.Text = "1.-";
             // 
@@ -563,7 +563,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(144, 392);
+            this.label9.Location = new System.Drawing.Point(144, 384);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(472, 27);
             this.label9.TabIndex = 14;
@@ -573,7 +573,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(144, 294);
+            this.label4.Location = new System.Drawing.Point(144, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(644, 27);
             this.label4.TabIndex = 13;
@@ -583,7 +583,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(144, 196);
+            this.label5.Location = new System.Drawing.Point(144, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(373, 27);
             this.label5.TabIndex = 12;
@@ -594,7 +594,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(144, 98);
+            this.label3.Location = new System.Drawing.Point(144, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(462, 27);
             this.label3.TabIndex = 11;
@@ -615,9 +615,9 @@
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(99, 392);
+            this.label11.Location = new System.Drawing.Point(99, 384);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 101);
+            this.label11.Size = new System.Drawing.Size(39, 97);
             this.label11.TabIndex = 39;
             this.label11.Text = "5.-";
             // 
@@ -625,9 +625,9 @@
             // 
             this.panel43.Controls.Add(this.button10);
             this.panel43.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel43.Location = new System.Drawing.Point(3, 496);
+            this.panel43.Location = new System.Drawing.Point(3, 484);
             this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(1406, 37);
+            this.panel43.Size = new System.Drawing.Size(1406, 49);
             this.panel43.TabIndex = 176;
             // 
             // button10
@@ -636,9 +636,9 @@
             this.button10.Dock = System.Windows.Forms.DockStyle.Right;
             this.button10.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(1259, 0);
+            this.button10.Location = new System.Drawing.Point(1229, 0);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(147, 37);
+            this.button10.Size = new System.Drawing.Size(177, 49);
             this.button10.TabIndex = 23;
             this.button10.Text = "Siguiente pagina";
             this.button10.UseVisualStyleBackColor = false;
@@ -687,7 +687,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1406, 493);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1406, 481);
             this.tableLayoutPanel3.TabIndex = 177;
             // 
             // panel11
@@ -695,9 +695,9 @@
             this.panel11.Controls.Add(this.radioButton17);
             this.panel11.Controls.Add(this.radioButton12);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(1045, 395);
+            this.panel11.Location = new System.Drawing.Point(1045, 387);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(358, 95);
+            this.panel11.Size = new System.Drawing.Size(358, 91);
             this.panel11.TabIndex = 46;
             // 
             // radioButton17
@@ -726,9 +726,9 @@
             this.panel10.Controls.Add(this.radioButton15);
             this.panel10.Controls.Add(this.radioButton14);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(1045, 297);
+            this.panel10.Location = new System.Drawing.Point(1045, 291);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(358, 92);
+            this.panel10.Size = new System.Drawing.Size(358, 90);
             this.panel10.TabIndex = 46;
             // 
             // radioButton15
@@ -757,9 +757,9 @@
             this.panel9.Controls.Add(this.radioButton13);
             this.panel9.Controls.Add(this.radioButton16);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(1045, 199);
+            this.panel9.Location = new System.Drawing.Point(1045, 195);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(358, 92);
+            this.panel9.Size = new System.Drawing.Size(358, 90);
             this.panel9.TabIndex = 46;
             // 
             // radioButton13
@@ -788,9 +788,9 @@
             this.panel8.Controls.Add(this.radioButton11);
             this.panel8.Controls.Add(this.radioButton18);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(1045, 101);
+            this.panel8.Location = new System.Drawing.Point(1045, 99);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(358, 92);
+            this.panel8.Size = new System.Drawing.Size(358, 90);
             this.panel8.TabIndex = 46;
             // 
             // radioButton11
@@ -821,7 +821,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(1045, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(358, 92);
+            this.panel7.Size = new System.Drawing.Size(358, 90);
             this.panel7.TabIndex = 46;
             // 
             // radioButton9
@@ -850,9 +850,9 @@
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Right;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(99, 392);
+            this.label12.Location = new System.Drawing.Point(99, 384);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 101);
+            this.label12.Size = new System.Drawing.Size(39, 97);
             this.label12.TabIndex = 60;
             this.label12.Text = "5.-";
             // 
@@ -861,9 +861,9 @@
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Right;
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(99, 294);
+            this.label13.Location = new System.Drawing.Point(99, 288);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 98);
+            this.label13.Size = new System.Drawing.Size(39, 96);
             this.label13.TabIndex = 59;
             this.label13.Text = "4.-";
             // 
@@ -872,9 +872,9 @@
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Right;
             this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(99, 196);
+            this.label14.Location = new System.Drawing.Point(99, 192);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 98);
+            this.label14.Size = new System.Drawing.Size(39, 96);
             this.label14.TabIndex = 58;
             this.label14.Text = "3.-";
             // 
@@ -883,9 +883,9 @@
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Right;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(99, 98);
+            this.label15.Location = new System.Drawing.Point(99, 96);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(39, 98);
+            this.label15.Size = new System.Drawing.Size(39, 96);
             this.label15.TabIndex = 57;
             this.label15.Text = "2.-";
             // 
@@ -896,7 +896,7 @@
             this.label16.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(99, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(39, 98);
+            this.label16.Size = new System.Drawing.Size(39, 96);
             this.label16.TabIndex = 46;
             this.label16.Text = "1.-";
             // 
@@ -904,7 +904,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(144, 392);
+            this.label17.Location = new System.Drawing.Point(144, 384);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(515, 27);
             this.label17.TabIndex = 44;
@@ -914,7 +914,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(144, 294);
+            this.label18.Location = new System.Drawing.Point(144, 288);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(710, 27);
             this.label18.TabIndex = 43;
@@ -924,7 +924,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(144, 196);
+            this.label19.Location = new System.Drawing.Point(144, 192);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(549, 27);
             this.label19.TabIndex = 42;
@@ -934,7 +934,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(144, 98);
+            this.label20.Location = new System.Drawing.Point(144, 96);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(543, 27);
             this.label20.TabIndex = 41;
@@ -954,9 +954,9 @@
             // 
             this.panel36.Controls.Add(this.button1);
             this.panel36.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel36.Location = new System.Drawing.Point(3, 496);
+            this.panel36.Location = new System.Drawing.Point(3, 484);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(1406, 37);
+            this.panel36.Size = new System.Drawing.Size(1406, 49);
             this.panel36.TabIndex = 176;
             // 
             // button1
@@ -965,9 +965,9 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1259, 0);
+            this.button1.Location = new System.Drawing.Point(1229, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 37);
+            this.button1.Size = new System.Drawing.Size(177, 49);
             this.button1.TabIndex = 45;
             this.button1.Text = "Siguiente pagina";
             this.button1.UseVisualStyleBackColor = false;
@@ -1015,7 +1015,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1412, 499);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1412, 487);
             this.tableLayoutPanel4.TabIndex = 178;
             // 
             // panel16
@@ -1023,9 +1023,9 @@
             this.panel16.Controls.Add(this.radioButton27);
             this.panel16.Controls.Add(this.radioButton22);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(1050, 399);
+            this.panel16.Location = new System.Drawing.Point(1050, 391);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(359, 97);
+            this.panel16.Size = new System.Drawing.Size(359, 93);
             this.panel16.TabIndex = 67;
             // 
             // radioButton27
@@ -1054,9 +1054,9 @@
             this.panel15.Controls.Add(this.radioButton25);
             this.panel15.Controls.Add(this.radioButton24);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(1050, 300);
+            this.panel15.Location = new System.Drawing.Point(1050, 294);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(359, 93);
+            this.panel15.Size = new System.Drawing.Size(359, 91);
             this.panel15.TabIndex = 67;
             // 
             // radioButton25
@@ -1085,9 +1085,9 @@
             this.panel14.Controls.Add(this.radioButton23);
             this.panel14.Controls.Add(this.radioButton26);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(1050, 201);
+            this.panel14.Location = new System.Drawing.Point(1050, 197);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(359, 93);
+            this.panel14.Size = new System.Drawing.Size(359, 91);
             this.panel14.TabIndex = 67;
             // 
             // radioButton23
@@ -1116,9 +1116,9 @@
             this.panel13.Controls.Add(this.radioButton21);
             this.panel13.Controls.Add(this.radioButton28);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(1050, 102);
+            this.panel13.Location = new System.Drawing.Point(1050, 100);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(359, 93);
+            this.panel13.Size = new System.Drawing.Size(359, 91);
             this.panel13.TabIndex = 67;
             // 
             // radioButton21
@@ -1149,7 +1149,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(1050, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(359, 93);
+            this.panel12.Size = new System.Drawing.Size(359, 91);
             this.panel12.TabIndex = 67;
             // 
             // radioButton19
@@ -1179,9 +1179,9 @@
             this.label22.AutoSize = true;
             this.label22.Dock = System.Windows.Forms.DockStyle.Right;
             this.label22.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(100, 396);
+            this.label22.Location = new System.Drawing.Point(100, 388);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(39, 103);
+            this.label22.Size = new System.Drawing.Size(39, 99);
             this.label22.TabIndex = 81;
             this.label22.Text = "5.-";
             // 
@@ -1190,9 +1190,9 @@
             this.label23.AutoSize = true;
             this.label23.Dock = System.Windows.Forms.DockStyle.Right;
             this.label23.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(100, 297);
+            this.label23.Location = new System.Drawing.Point(100, 291);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(39, 99);
+            this.label23.Size = new System.Drawing.Size(39, 97);
             this.label23.TabIndex = 80;
             this.label23.Text = "4.-";
             // 
@@ -1201,9 +1201,9 @@
             this.label24.AutoSize = true;
             this.label24.Dock = System.Windows.Forms.DockStyle.Right;
             this.label24.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(100, 198);
+            this.label24.Location = new System.Drawing.Point(100, 194);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(39, 99);
+            this.label24.Size = new System.Drawing.Size(39, 97);
             this.label24.TabIndex = 79;
             this.label24.Text = "3.-";
             // 
@@ -1212,9 +1212,9 @@
             this.label25.AutoSize = true;
             this.label25.Dock = System.Windows.Forms.DockStyle.Right;
             this.label25.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(100, 99);
+            this.label25.Location = new System.Drawing.Point(100, 97);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(39, 99);
+            this.label25.Size = new System.Drawing.Size(39, 97);
             this.label25.TabIndex = 78;
             this.label25.Text = "2.-";
             // 
@@ -1225,7 +1225,7 @@
             this.label26.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(100, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(39, 99);
+            this.label26.Size = new System.Drawing.Size(39, 97);
             this.label26.TabIndex = 67;
             this.label26.Text = "1.-";
             // 
@@ -1233,7 +1233,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(145, 396);
+            this.label27.Location = new System.Drawing.Point(145, 388);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(801, 27);
             this.label27.TabIndex = 65;
@@ -1243,7 +1243,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(145, 297);
+            this.label28.Location = new System.Drawing.Point(145, 291);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(496, 27);
             this.label28.TabIndex = 64;
@@ -1253,7 +1253,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(145, 198);
+            this.label29.Location = new System.Drawing.Point(145, 194);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(625, 27);
             this.label29.TabIndex = 63;
@@ -1263,7 +1263,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(145, 99);
+            this.label30.Location = new System.Drawing.Point(145, 97);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(434, 27);
             this.label30.TabIndex = 62;
@@ -1284,9 +1284,9 @@
             // 
             this.panel37.Controls.Add(this.button2);
             this.panel37.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel37.Location = new System.Drawing.Point(0, 499);
+            this.panel37.Location = new System.Drawing.Point(0, 487);
             this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(1412, 37);
+            this.panel37.Size = new System.Drawing.Size(1412, 49);
             this.panel37.TabIndex = 177;
             // 
             // button2
@@ -1295,9 +1295,9 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Right;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1265, 0);
+            this.button2.Location = new System.Drawing.Point(1235, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 37);
+            this.button2.Size = new System.Drawing.Size(177, 49);
             this.button2.TabIndex = 66;
             this.button2.Text = "Siguiente pagina";
             this.button2.UseVisualStyleBackColor = false;
@@ -1345,7 +1345,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1412, 499);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1412, 487);
             this.tableLayoutPanel5.TabIndex = 178;
             // 
             // panel21
@@ -1353,9 +1353,9 @@
             this.panel21.Controls.Add(this.radioButton37);
             this.panel21.Controls.Add(this.radioButton32);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(1050, 399);
+            this.panel21.Location = new System.Drawing.Point(1050, 391);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(359, 97);
+            this.panel21.Size = new System.Drawing.Size(359, 93);
             this.panel21.TabIndex = 88;
             // 
             // radioButton37
@@ -1384,9 +1384,9 @@
             this.panel20.Controls.Add(this.radioButton35);
             this.panel20.Controls.Add(this.radioButton34);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(1050, 300);
+            this.panel20.Location = new System.Drawing.Point(1050, 294);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(359, 93);
+            this.panel20.Size = new System.Drawing.Size(359, 91);
             this.panel20.TabIndex = 88;
             // 
             // radioButton35
@@ -1415,9 +1415,9 @@
             this.panel19.Controls.Add(this.radioButton33);
             this.panel19.Controls.Add(this.radioButton36);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(1050, 201);
+            this.panel19.Location = new System.Drawing.Point(1050, 197);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(359, 93);
+            this.panel19.Size = new System.Drawing.Size(359, 91);
             this.panel19.TabIndex = 88;
             // 
             // radioButton33
@@ -1446,9 +1446,9 @@
             this.panel18.Controls.Add(this.radioButton31);
             this.panel18.Controls.Add(this.radioButton38);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(1050, 102);
+            this.panel18.Location = new System.Drawing.Point(1050, 100);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(359, 93);
+            this.panel18.Size = new System.Drawing.Size(359, 91);
             this.panel18.TabIndex = 88;
             // 
             // radioButton31
@@ -1479,7 +1479,7 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(1050, 3);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(359, 93);
+            this.panel17.Size = new System.Drawing.Size(359, 91);
             this.panel17.TabIndex = 88;
             // 
             // radioButton29
@@ -1508,9 +1508,9 @@
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Right;
             this.label32.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(100, 396);
+            this.label32.Location = new System.Drawing.Point(100, 388);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(39, 103);
+            this.label32.Size = new System.Drawing.Size(39, 99);
             this.label32.TabIndex = 102;
             this.label32.Text = "5.-";
             // 
@@ -1519,9 +1519,9 @@
             this.label33.AutoSize = true;
             this.label33.Dock = System.Windows.Forms.DockStyle.Right;
             this.label33.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(100, 297);
+            this.label33.Location = new System.Drawing.Point(100, 291);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(39, 99);
+            this.label33.Size = new System.Drawing.Size(39, 97);
             this.label33.TabIndex = 101;
             this.label33.Text = "4.-";
             // 
@@ -1530,9 +1530,9 @@
             this.label34.AutoSize = true;
             this.label34.Dock = System.Windows.Forms.DockStyle.Right;
             this.label34.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(100, 198);
+            this.label34.Location = new System.Drawing.Point(100, 194);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(39, 99);
+            this.label34.Size = new System.Drawing.Size(39, 97);
             this.label34.TabIndex = 100;
             this.label34.Text = "3.-";
             // 
@@ -1541,9 +1541,9 @@
             this.label35.AutoSize = true;
             this.label35.Dock = System.Windows.Forms.DockStyle.Right;
             this.label35.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(100, 99);
+            this.label35.Location = new System.Drawing.Point(100, 97);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(39, 99);
+            this.label35.Size = new System.Drawing.Size(39, 97);
             this.label35.TabIndex = 99;
             this.label35.Text = "2.-";
             // 
@@ -1554,7 +1554,7 @@
             this.label36.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(100, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(39, 99);
+            this.label36.Size = new System.Drawing.Size(39, 97);
             this.label36.TabIndex = 88;
             this.label36.Text = "1.-";
             // 
@@ -1562,7 +1562,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(145, 396);
+            this.label37.Location = new System.Drawing.Point(145, 388);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(585, 27);
             this.label37.TabIndex = 86;
@@ -1572,7 +1572,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(145, 297);
+            this.label38.Location = new System.Drawing.Point(145, 291);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(335, 27);
             this.label38.TabIndex = 85;
@@ -1582,7 +1582,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(145, 198);
+            this.label39.Location = new System.Drawing.Point(145, 194);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(383, 27);
             this.label39.TabIndex = 84;
@@ -1592,7 +1592,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(145, 99);
+            this.label40.Location = new System.Drawing.Point(145, 97);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(623, 27);
             this.label40.TabIndex = 83;
@@ -1613,9 +1613,9 @@
             // 
             this.panel38.Controls.Add(this.button3);
             this.panel38.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel38.Location = new System.Drawing.Point(0, 499);
+            this.panel38.Location = new System.Drawing.Point(0, 487);
             this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(1412, 37);
+            this.panel38.Size = new System.Drawing.Size(1412, 49);
             this.panel38.TabIndex = 177;
             // 
             // button3
@@ -1624,9 +1624,9 @@
             this.button3.Dock = System.Windows.Forms.DockStyle.Right;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1265, 0);
+            this.button3.Location = new System.Drawing.Point(1235, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 37);
+            this.button3.Size = new System.Drawing.Size(177, 49);
             this.button3.TabIndex = 87;
             this.button3.Text = "Siguiente pagina";
             this.button3.UseVisualStyleBackColor = false;
@@ -1674,7 +1674,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1412, 499);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1412, 487);
             this.tableLayoutPanel6.TabIndex = 182;
             // 
             // panel26
@@ -1682,9 +1682,9 @@
             this.panel26.Controls.Add(this.radioButton47);
             this.panel26.Controls.Add(this.radioButton42);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel26.Location = new System.Drawing.Point(1050, 399);
+            this.panel26.Location = new System.Drawing.Point(1050, 391);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(359, 97);
+            this.panel26.Size = new System.Drawing.Size(359, 93);
             this.panel26.TabIndex = 109;
             // 
             // radioButton47
@@ -1713,9 +1713,9 @@
             this.panel25.Controls.Add(this.radioButton45);
             this.panel25.Controls.Add(this.radioButton44);
             this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(1050, 300);
+            this.panel25.Location = new System.Drawing.Point(1050, 294);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(359, 93);
+            this.panel25.Size = new System.Drawing.Size(359, 91);
             this.panel25.TabIndex = 109;
             // 
             // radioButton45
@@ -1744,9 +1744,9 @@
             this.panel24.Controls.Add(this.radioButton43);
             this.panel24.Controls.Add(this.radioButton46);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(1050, 201);
+            this.panel24.Location = new System.Drawing.Point(1050, 197);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(359, 93);
+            this.panel24.Size = new System.Drawing.Size(359, 91);
             this.panel24.TabIndex = 109;
             // 
             // radioButton43
@@ -1776,9 +1776,9 @@
             this.panel23.Controls.Add(this.radioButton41);
             this.panel23.Controls.Add(this.radioButton48);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(1050, 102);
+            this.panel23.Location = new System.Drawing.Point(1050, 100);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(359, 93);
+            this.panel23.Size = new System.Drawing.Size(359, 91);
             this.panel23.TabIndex = 109;
             // 
             // radioButton41
@@ -1809,7 +1809,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel22.Location = new System.Drawing.Point(1050, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(359, 93);
+            this.panel22.Size = new System.Drawing.Size(359, 91);
             this.panel22.TabIndex = 109;
             // 
             // radioButton39
@@ -1838,9 +1838,9 @@
             this.label42.AutoSize = true;
             this.label42.Dock = System.Windows.Forms.DockStyle.Right;
             this.label42.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(100, 396);
+            this.label42.Location = new System.Drawing.Point(100, 388);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(39, 103);
+            this.label42.Size = new System.Drawing.Size(39, 99);
             this.label42.TabIndex = 123;
             this.label42.Text = "5.-";
             // 
@@ -1849,9 +1849,9 @@
             this.label43.AutoSize = true;
             this.label43.Dock = System.Windows.Forms.DockStyle.Right;
             this.label43.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(100, 297);
+            this.label43.Location = new System.Drawing.Point(100, 291);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(39, 99);
+            this.label43.Size = new System.Drawing.Size(39, 97);
             this.label43.TabIndex = 122;
             this.label43.Text = "4.-";
             // 
@@ -1860,9 +1860,9 @@
             this.label44.AutoSize = true;
             this.label44.Dock = System.Windows.Forms.DockStyle.Right;
             this.label44.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(100, 198);
+            this.label44.Location = new System.Drawing.Point(100, 194);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(39, 99);
+            this.label44.Size = new System.Drawing.Size(39, 97);
             this.label44.TabIndex = 121;
             this.label44.Text = "3.-";
             // 
@@ -1871,9 +1871,9 @@
             this.label45.AutoSize = true;
             this.label45.Dock = System.Windows.Forms.DockStyle.Right;
             this.label45.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(100, 99);
+            this.label45.Location = new System.Drawing.Point(100, 97);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(39, 99);
+            this.label45.Size = new System.Drawing.Size(39, 97);
             this.label45.TabIndex = 120;
             this.label45.Text = "2.-";
             // 
@@ -1884,7 +1884,7 @@
             this.label46.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Location = new System.Drawing.Point(100, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(39, 99);
+            this.label46.Size = new System.Drawing.Size(39, 97);
             this.label46.TabIndex = 109;
             this.label46.Text = "1.-";
             // 
@@ -1892,7 +1892,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(145, 396);
+            this.label47.Location = new System.Drawing.Point(145, 388);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(644, 27);
             this.label47.TabIndex = 107;
@@ -1902,7 +1902,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(145, 297);
+            this.label48.Location = new System.Drawing.Point(145, 291);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(640, 27);
             this.label48.TabIndex = 106;
@@ -1912,7 +1912,7 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(145, 198);
+            this.label49.Location = new System.Drawing.Point(145, 194);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(424, 27);
             this.label49.TabIndex = 105;
@@ -1922,7 +1922,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(145, 99);
+            this.label50.Location = new System.Drawing.Point(145, 97);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(409, 27);
             this.label50.TabIndex = 104;
@@ -1942,9 +1942,9 @@
             // 
             this.panel39.Controls.Add(this.button4);
             this.panel39.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel39.Location = new System.Drawing.Point(0, 499);
+            this.panel39.Location = new System.Drawing.Point(0, 487);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(1412, 37);
+            this.panel39.Size = new System.Drawing.Size(1412, 49);
             this.panel39.TabIndex = 181;
             // 
             // button4
@@ -1953,9 +1953,9 @@
             this.button4.Dock = System.Windows.Forms.DockStyle.Right;
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1265, 0);
+            this.button4.Location = new System.Drawing.Point(1235, 0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 37);
+            this.button4.Size = new System.Drawing.Size(177, 49);
             this.button4.TabIndex = 108;
             this.button4.Text = "Siguiente pagina";
             this.button4.UseVisualStyleBackColor = false;
@@ -2003,7 +2003,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1412, 499);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1412, 487);
             this.tableLayoutPanel7.TabIndex = 182;
             // 
             // panel31
@@ -2011,9 +2011,9 @@
             this.panel31.Controls.Add(this.radioButton57);
             this.panel31.Controls.Add(this.radioButton52);
             this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel31.Location = new System.Drawing.Point(1050, 399);
+            this.panel31.Location = new System.Drawing.Point(1050, 391);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(359, 97);
+            this.panel31.Size = new System.Drawing.Size(359, 93);
             this.panel31.TabIndex = 130;
             // 
             // radioButton57
@@ -2042,9 +2042,9 @@
             this.panel30.Controls.Add(this.radioButton55);
             this.panel30.Controls.Add(this.radioButton54);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel30.Location = new System.Drawing.Point(1050, 300);
+            this.panel30.Location = new System.Drawing.Point(1050, 294);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(359, 93);
+            this.panel30.Size = new System.Drawing.Size(359, 91);
             this.panel30.TabIndex = 130;
             // 
             // radioButton55
@@ -2073,9 +2073,9 @@
             this.panel29.Controls.Add(this.radioButton53);
             this.panel29.Controls.Add(this.radioButton56);
             this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel29.Location = new System.Drawing.Point(1050, 201);
+            this.panel29.Location = new System.Drawing.Point(1050, 197);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(359, 93);
+            this.panel29.Size = new System.Drawing.Size(359, 91);
             this.panel29.TabIndex = 130;
             // 
             // radioButton53
@@ -2105,9 +2105,9 @@
             this.panel28.Controls.Add(this.radioButton51);
             this.panel28.Controls.Add(this.radioButton58);
             this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel28.Location = new System.Drawing.Point(1050, 102);
+            this.panel28.Location = new System.Drawing.Point(1050, 100);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(359, 93);
+            this.panel28.Size = new System.Drawing.Size(359, 91);
             this.panel28.TabIndex = 130;
             // 
             // radioButton51
@@ -2138,7 +2138,7 @@
             this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel27.Location = new System.Drawing.Point(1050, 3);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(359, 93);
+            this.panel27.Size = new System.Drawing.Size(359, 91);
             this.panel27.TabIndex = 130;
             // 
             // radioButton49
@@ -2167,9 +2167,9 @@
             this.label52.AutoSize = true;
             this.label52.Dock = System.Windows.Forms.DockStyle.Right;
             this.label52.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(100, 396);
+            this.label52.Location = new System.Drawing.Point(100, 388);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(39, 103);
+            this.label52.Size = new System.Drawing.Size(39, 99);
             this.label52.TabIndex = 144;
             this.label52.Text = "5.-";
             // 
@@ -2178,9 +2178,9 @@
             this.label53.AutoSize = true;
             this.label53.Dock = System.Windows.Forms.DockStyle.Right;
             this.label53.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(100, 297);
+            this.label53.Location = new System.Drawing.Point(100, 291);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(39, 99);
+            this.label53.Size = new System.Drawing.Size(39, 97);
             this.label53.TabIndex = 143;
             this.label53.Text = "4.-";
             // 
@@ -2189,9 +2189,9 @@
             this.label54.AutoSize = true;
             this.label54.Dock = System.Windows.Forms.DockStyle.Right;
             this.label54.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(100, 198);
+            this.label54.Location = new System.Drawing.Point(100, 194);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(39, 99);
+            this.label54.Size = new System.Drawing.Size(39, 97);
             this.label54.TabIndex = 142;
             this.label54.Text = "3.-";
             // 
@@ -2200,9 +2200,9 @@
             this.label55.AutoSize = true;
             this.label55.Dock = System.Windows.Forms.DockStyle.Right;
             this.label55.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(100, 99);
+            this.label55.Location = new System.Drawing.Point(100, 97);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(39, 99);
+            this.label55.Size = new System.Drawing.Size(39, 97);
             this.label55.TabIndex = 141;
             this.label55.Text = "2.-";
             // 
@@ -2213,7 +2213,7 @@
             this.label56.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.Location = new System.Drawing.Point(100, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(39, 99);
+            this.label56.Size = new System.Drawing.Size(39, 97);
             this.label56.TabIndex = 130;
             this.label56.Text = "1.-";
             // 
@@ -2221,7 +2221,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(145, 396);
+            this.label57.Location = new System.Drawing.Point(145, 388);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(745, 27);
             this.label57.TabIndex = 128;
@@ -2231,7 +2231,7 @@
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(145, 297);
+            this.label58.Location = new System.Drawing.Point(145, 291);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(516, 54);
             this.label58.TabIndex = 127;
@@ -2242,7 +2242,7 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(145, 198);
+            this.label59.Location = new System.Drawing.Point(145, 194);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(487, 27);
             this.label59.TabIndex = 126;
@@ -2252,7 +2252,7 @@
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(145, 99);
+            this.label60.Location = new System.Drawing.Point(145, 97);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(620, 27);
             this.label60.TabIndex = 125;
@@ -2272,9 +2272,9 @@
             // 
             this.panel40.Controls.Add(this.button5);
             this.panel40.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel40.Location = new System.Drawing.Point(0, 499);
+            this.panel40.Location = new System.Drawing.Point(0, 487);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(1412, 37);
+            this.panel40.Size = new System.Drawing.Size(1412, 49);
             this.panel40.TabIndex = 181;
             // 
             // button5
@@ -2283,9 +2283,9 @@
             this.button5.Dock = System.Windows.Forms.DockStyle.Right;
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(1265, 0);
+            this.button5.Location = new System.Drawing.Point(1235, 0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(147, 37);
+            this.button5.Size = new System.Drawing.Size(177, 49);
             this.button5.TabIndex = 129;
             this.button5.Text = "Siguiente pagina";
             this.button5.UseVisualStyleBackColor = false;
@@ -2333,7 +2333,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1412, 499);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1412, 487);
             this.tableLayoutPanel8.TabIndex = 183;
             // 
             // panel42
@@ -2341,9 +2341,9 @@
             this.panel42.Controls.Add(this.radioButton69);
             this.panel42.Controls.Add(this.radioButton62);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel42.Location = new System.Drawing.Point(1050, 399);
+            this.panel42.Location = new System.Drawing.Point(1050, 391);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(359, 97);
+            this.panel42.Size = new System.Drawing.Size(359, 93);
             this.panel42.TabIndex = 151;
             // 
             // radioButton69
@@ -2372,9 +2372,9 @@
             this.panel35.Controls.Add(this.radioButton67);
             this.panel35.Controls.Add(this.radioButton64);
             this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel35.Location = new System.Drawing.Point(1050, 300);
+            this.panel35.Location = new System.Drawing.Point(1050, 294);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(359, 93);
+            this.panel35.Size = new System.Drawing.Size(359, 91);
             this.panel35.TabIndex = 151;
             // 
             // radioButton67
@@ -2403,9 +2403,9 @@
             this.panel34.Controls.Add(this.radioButton65);
             this.panel34.Controls.Add(this.radioButton66);
             this.panel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel34.Location = new System.Drawing.Point(1050, 201);
+            this.panel34.Location = new System.Drawing.Point(1050, 197);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(359, 93);
+            this.panel34.Size = new System.Drawing.Size(359, 91);
             this.panel34.TabIndex = 151;
             // 
             // radioButton65
@@ -2434,9 +2434,9 @@
             this.panel33.Controls.Add(this.radioButton63);
             this.panel33.Controls.Add(this.radioButton68);
             this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel33.Location = new System.Drawing.Point(1050, 102);
+            this.panel33.Location = new System.Drawing.Point(1050, 100);
             this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(359, 93);
+            this.panel33.Size = new System.Drawing.Size(359, 91);
             this.panel33.TabIndex = 151;
             // 
             // radioButton63
@@ -2468,7 +2468,7 @@
             this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel32.Location = new System.Drawing.Point(1050, 3);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(359, 93);
+            this.panel32.Size = new System.Drawing.Size(359, 91);
             this.panel32.TabIndex = 151;
             // 
             // radioButton59
@@ -2497,9 +2497,9 @@
             this.label62.AutoSize = true;
             this.label62.Dock = System.Windows.Forms.DockStyle.Right;
             this.label62.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(100, 396);
+            this.label62.Location = new System.Drawing.Point(100, 388);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(39, 103);
+            this.label62.Size = new System.Drawing.Size(39, 99);
             this.label62.TabIndex = 165;
             this.label62.Text = "5.-";
             // 
@@ -2508,9 +2508,9 @@
             this.label63.AutoSize = true;
             this.label63.Dock = System.Windows.Forms.DockStyle.Right;
             this.label63.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(100, 297);
+            this.label63.Location = new System.Drawing.Point(100, 291);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(39, 99);
+            this.label63.Size = new System.Drawing.Size(39, 97);
             this.label63.TabIndex = 164;
             this.label63.Text = "4.-";
             // 
@@ -2519,9 +2519,9 @@
             this.label64.AutoSize = true;
             this.label64.Dock = System.Windows.Forms.DockStyle.Right;
             this.label64.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(100, 198);
+            this.label64.Location = new System.Drawing.Point(100, 194);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(39, 99);
+            this.label64.Size = new System.Drawing.Size(39, 97);
             this.label64.TabIndex = 163;
             this.label64.Text = "3.-";
             // 
@@ -2530,9 +2530,9 @@
             this.label65.AutoSize = true;
             this.label65.Dock = System.Windows.Forms.DockStyle.Right;
             this.label65.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(100, 99);
+            this.label65.Location = new System.Drawing.Point(100, 97);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(39, 99);
+            this.label65.Size = new System.Drawing.Size(39, 97);
             this.label65.TabIndex = 162;
             this.label65.Text = "2.-";
             // 
@@ -2543,7 +2543,7 @@
             this.label66.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label66.Location = new System.Drawing.Point(100, 0);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(39, 99);
+            this.label66.Size = new System.Drawing.Size(39, 97);
             this.label66.TabIndex = 151;
             this.label66.Text = "1.-";
             // 
@@ -2551,7 +2551,7 @@
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(145, 396);
+            this.label67.Location = new System.Drawing.Point(145, 388);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(576, 27);
             this.label67.TabIndex = 149;
@@ -2561,7 +2561,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(145, 297);
+            this.label68.Location = new System.Drawing.Point(145, 291);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(786, 27);
             this.label68.TabIndex = 148;
@@ -2571,7 +2571,7 @@
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(145, 198);
+            this.label69.Location = new System.Drawing.Point(145, 194);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(770, 27);
             this.label69.TabIndex = 147;
@@ -2581,7 +2581,7 @@
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(145, 99);
+            this.label70.Location = new System.Drawing.Point(145, 97);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(898, 54);
             this.label70.TabIndex = 146;
@@ -2603,9 +2603,9 @@
             // 
             this.panel41.Controls.Add(this.button6);
             this.panel41.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel41.Location = new System.Drawing.Point(0, 499);
+            this.panel41.Location = new System.Drawing.Point(0, 487);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(1412, 37);
+            this.panel41.Size = new System.Drawing.Size(1412, 49);
             this.panel41.TabIndex = 181;
             // 
             // button6
@@ -2614,9 +2614,9 @@
             this.button6.Dock = System.Windows.Forms.DockStyle.Right;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(1265, 0);
+            this.button6.Location = new System.Drawing.Point(1235, 0);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(147, 37);
+            this.button6.Size = new System.Drawing.Size(177, 49);
             this.button6.TabIndex = 150;
             this.button6.Text = "Finalizar";
             this.button6.UseVisualStyleBackColor = false;
