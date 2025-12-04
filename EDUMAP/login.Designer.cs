@@ -73,7 +73,7 @@
             this.txtcontraseña.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcontraseña.Location = new System.Drawing.Point(342, 282);
             this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.PasswordChar = '*';
+            this.txtcontraseña.PasswordChar = '•';
             this.txtcontraseña.Size = new System.Drawing.Size(553, 49);
             this.txtcontraseña.TabIndex = 7;
             // 
