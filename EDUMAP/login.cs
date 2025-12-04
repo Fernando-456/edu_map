@@ -104,5 +104,19 @@ namespace EDUMAP
         {
 
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            txtcontraseña.PasswordChar = '\0';
+            iconButton1.Visible = false;
+            iconButton2.Visible = true;
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            txtcontraseña.PasswordChar = '•';
+            iconButton2.Visible = false;
+            iconButton1.Visible = true;
+        }
     }
 }
