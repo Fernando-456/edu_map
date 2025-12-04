@@ -19,17 +19,7 @@ namespace EDUMAP
             
             InitializeComponent();
         }
-        void mayor()
-        {
-            int[] valores = { Global.SI_A, Global.SI_E, Global.SI_C, Global.SI_S, Global.SI_D, Global.SI_F, Global.SI_L };
-            // 2. Ordenamos de mayor a menor
-            Array.Sort(valores);
-            Array.Reverse(valores);
-            // 3. Asignamos los 3 mayores a los textBox
-            //lblprimera.Text = valores[0].ToString(); // Mayor
-            lblsegunda.Text = valores[1].ToString(); // Segunda mayor
-            //textBox3.Text = valores[2].ToString(); // Tercera mayor
-        }
+        
         private void CargarDatos_A()
         {
             using (MySqlConnection conn = new MySqlConnection(conexion))
@@ -165,49 +155,7 @@ namespace EDUMAP
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            mayor();
-            if (lblsegunda.Text == Global.SI_A.ToString())
-            {
-                CargarDatos_A();
-                lblsegunda.Visible = true;
-                lblsegunda.Text = "Artístico";
-            }
-            else if (lblsegunda.Text == Global.SI_E.ToString())
-            {
-                CargarDatos_E();
-                lblsegunda.Visible = true;
-                lblsegunda.Text = "Emprendimiento";
-            }
-            else if (lblsegunda.Text == Global.SI_C.ToString())
-            {
-                CargarDatos_C();
-                lblsegunda.Visible = true;
-                lblsegunda.Text = "Científico";
-            }
-            else if (lblsegunda.Text == Global.SI_S.ToString())
-            {
-                CargarDatos_S();
-                lblsegunda.Visible = true;
-                lblsegunda.Text = "Social";
-            }
-            else if (lblsegunda.Text == Global.SI_D.ToString())
-            {
-                CargarDatos_D();
-                lblsegunda.Visible = true;
-                lblsegunda.Text = "Desarrollo";
-            }
-            else if (lblsegunda.Text == Global.SI_F.ToString())
-            {
-                CargarDatos_F();
-                lblsegunda.Visible = true;
-                lblsegunda.Text = "Finanzas";
-            }
-            else if (lblsegunda.Text == Global.SI_L.ToString())
-            {
-                CargarDatos_L();
-                lblsegunda.Visible = true;
-                lblsegunda.Text = "Leyes";
-            }
+            
         }
         private Form FormActual = null;
         private void abrirForm(Form form)
@@ -236,6 +184,48 @@ namespace EDUMAP
         private void Segunda_opcion_Load(object sender, EventArgs e)
         {
 
+            if (Global.Segunda_opcion == Global.SI_A.ToString())
+            {
+                CargarDatos_A();
+                lblsegunda.Visible = true;
+                lblsegunda.Text = "Artístico";
+            }
+            else if (Global.Segunda_opcion == Global.SI_E.ToString())
+            {
+                CargarDatos_E();
+                lblsegunda.Visible = true;
+                lblsegunda.Text = "Emprendimiento";
+            }
+            else if (Global.Segunda_opcion == Global.SI_C.ToString())
+            {
+                CargarDatos_C();
+                lblsegunda.Visible = true;
+                lblsegunda.Text = "Científico";
+            }
+            else if (Global.Segunda_opcion == Global.SI_S.ToString())
+            {
+                CargarDatos_S();
+                lblsegunda.Visible = true;
+                lblsegunda.Text = "Social";
+            }
+            else if (Global.Segunda_opcion == Global.SI_D.ToString())
+            {
+                CargarDatos_D();
+                lblsegunda.Visible = true;
+                lblsegunda.Text = "Desarrollo";
+            }
+            else if (Global.Segunda_opcion == Global.SI_F.ToString())
+            {
+                CargarDatos_F();
+                lblsegunda.Visible = true;
+                lblsegunda.Text = "Finanzas";
+            }
+            else if (Global.Segunda_opcion == Global.SI_L.ToString())
+            {
+                CargarDatos_L();
+                lblsegunda.Visible = true;
+                lblsegunda.Text = "Leyes";
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace EDUMAP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ANIMACION());
+            Application.Run(new Form1());
             
         }
     }
@@ -33,5 +33,9 @@ namespace EDUMAP
         public static string usuario;
         public static string contraseña;
         public static Boolean BD;
+        public static String Primera_opcion;
+        public static String Segunda_opcion;
+        public static String Tercera_opcion;
+
     }
 }

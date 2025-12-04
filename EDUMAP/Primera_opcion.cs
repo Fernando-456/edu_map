@@ -26,60 +26,23 @@ namespace EDUMAP
         }
         void mayor()
         {
-            int[] valores = { Global.SI_A,Global.SI_E,Global.SI_C,Global.SI_S,Global.SI_D,Global.SI_F,Global.SI_L };
-            // 2. Ordenamos de mayor a menor
-            Array.Sort(valores);
-            Array.Reverse(valores);
-            // 3. Asignamos los 3 mayores a los textBox
-            lblprimera.Text = valores[0].ToString(); // Mayor
-            //lblsegunda.Text = valores[1].ToString(); // Segunda mayor
-            //textBox3.Text = valores[2].ToString(); // Tercera mayor
+            int[] valores = { Global.SI_A, Global.SI_E, Global.SI_C, Global.SI_S, Global.SI_D, Global.SI_F, Global.SI_L };
+
+            // 1. Eliminar repetidos
+            int[] valoresUnicos = valores.Distinct().ToArray();
+
+            // 2. Ordenar de mayor a menor
+            Array.Sort(valoresUnicos);
+            Array.Reverse(valoresUnicos);
+
+            // 3. Asignar los 3 mayores SIN repetidos
+            Global.Primera_opcion = valoresUnicos.Length > 0 ? valoresUnicos[0].ToString() : "0";
+            Global.Segunda_opcion = valoresUnicos.Length > 1 ? valoresUnicos[1].ToString() : "0";
+            Global.Tercera_opcion = valoresUnicos.Length > 2 ? valoresUnicos[2].ToString() : "0";
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            mayor();
-            if (lblprimera.Text == Global.SI_A.ToString())
-            {
-                CargarDatos_A();
-                lblprimera.Visible = true;
-                lblprimera.Text = "Artístico";
-            }
-            else if (lblprimera.Text == Global.SI_E.ToString())
-            {
-                CargarDatos_E();
-                lblprimera.Visible = true;
-                lblprimera.Text = "Emprendimiento";
-            }
-            else if (lblprimera.Text == Global.SI_C.ToString())
-            {
-                CargarDatos_C();
-                lblprimera.Visible = true;
-                lblprimera.Text = "Científico";
-            }
-            else if (lblprimera.Text == Global.SI_S.ToString())
-            {
-                CargarDatos_S();
-                lblprimera.Visible = true;
-                lblprimera.Text = "Social";
-            }
-            else if (lblprimera.Text == Global.SI_D.ToString())
-            {
-                CargarDatos_D();
-                lblprimera.Visible = true;
-                lblprimera.Text = "Desarrollo";
-            }
-            else if (lblprimera.Text == Global.SI_F.ToString())
-            {
-                CargarDatos_F();
-                lblprimera.Visible = true;
-                lblprimera.Text = "Finanzas";
-            }
-            else if (lblprimera.Text == Global.SI_L.ToString())
-            {
-                CargarDatos_L();
-                lblprimera.Visible = true;
-                lblprimera.Text = "Leyes";
-            }
+            
 
         }
         
@@ -218,7 +181,49 @@ namespace EDUMAP
         }
         private void Primera_opcion_Load(object sender, EventArgs e)
         {
-            
+            mayor();
+            if (Global.Primera_opcion == Global.SI_A.ToString())
+            {
+                CargarDatos_A();
+                lblprimera.Visible = true;
+                lblprimera.Text = "Artístico";
+            }
+            else if (Global.Primera_opcion == Global.SI_E.ToString())
+            {
+                CargarDatos_E();
+                lblprimera.Visible = true;
+                lblprimera.Text = "Emprendimiento";
+            }
+            else if (Global.Primera_opcion == Global.SI_C.ToString())
+            {
+                CargarDatos_C();
+                lblprimera.Visible = true;
+                lblprimera.Text = "Científico";
+            }
+            else if (Global.Primera_opcion == Global.SI_S.ToString())
+            {
+                CargarDatos_S();
+                lblprimera.Visible = true;
+                lblprimera.Text = "Social";
+            }
+            else if (Global.Primera_opcion == Global.SI_D.ToString())
+            {
+                CargarDatos_D();
+                lblprimera.Visible = true;
+                lblprimera.Text = "Desarrollo";
+            }
+            else if (Global.Primera_opcion == Global.SI_F.ToString())
+            {
+                CargarDatos_F();
+                lblprimera.Visible = true;
+                lblprimera.Text = "Finanzas";
+            }
+            else if (Global.Primera_opcion == Global.SI_L.ToString())
+            {
+                CargarDatos_L();
+                lblprimera.Visible = true;
+                lblprimera.Text = "Leyes";
+            }
         }
         private Form FormActual = null;
         private void abrirForm(Form form)
@@ -245,6 +250,11 @@ namespace EDUMAP
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

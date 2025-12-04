@@ -66,12 +66,6 @@ namespace EDUMAP
 
             lblL.Text = Global.SI_L.ToString();
             lblL.Visible = true;
-
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
             try
             {
                 mconexion.Open();
@@ -87,7 +81,7 @@ namespace EDUMAP
                 mysqlCommand.ExecuteNonQuery();
 
 
-                MessageBox.Show("Resultados guardados correctamente..");
+                
 
 
 
@@ -96,7 +90,12 @@ namespace EDUMAP
             {
                 MessageBox.Show("Error al guardar resultados el usuario: " + ex.Message);
             }
-}
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
         private Form FormActual = null;
         private void abrirForm(Form form)
         {

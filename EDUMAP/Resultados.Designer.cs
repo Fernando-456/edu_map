@@ -33,27 +33,24 @@
             this.lblA = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.lblC = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.lblD = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.lblE = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.lblF = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.lblL = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.lblS = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.lblC = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.lblL = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.lblD = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.lblF = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.lblE = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -69,20 +66,21 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -91,7 +89,8 @@
             this.panel13.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -127,9 +126,9 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(329, 3);
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(320, 56);
+            this.button1.Size = new System.Drawing.Size(484, 56);
             this.button1.TabIndex = 37;
             this.button1.Text = "Mostrar resultados";
             this.button1.UseVisualStyleBackColor = false;
@@ -141,27 +140,13 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(655, 3);
+            this.button2.Location = new System.Drawing.Point(493, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(323, 56);
+            this.button2.Size = new System.Drawing.Size(485, 56);
             this.button2.TabIndex = 38;
             this.button2.Text = "Siguiente";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(320, 56);
-            this.button3.TabIndex = 39;
-            this.button3.Text = "Guardar resultados (BD)";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel1
             // 
@@ -204,176 +189,21 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(987, 629);
             this.tableLayoutPanel1.TabIndex = 59;
             // 
-            // panel21
+            // tableLayoutPanel4
             // 
-            this.panel21.Controls.Add(this.lblA);
-            this.panel21.Location = new System.Drawing.Point(3, 3);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(134, 57);
-            this.panel21.TabIndex = 50;
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.lblC);
-            this.panel24.Location = new System.Drawing.Point(143, 3);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(134, 57);
-            this.panel24.TabIndex = 54;
-            // 
-            // lblC
-            // 
-            this.lblC.AutoSize = true;
-            this.lblC.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.lblC.Location = new System.Drawing.Point(33, 0);
-            this.lblC.Name = "lblC";
-            this.lblC.Size = new System.Drawing.Size(54, 57);
-            this.lblC.TabIndex = 30;
-            this.lblC.Text = "C";
-            this.lblC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblC.Visible = false;
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.lblD);
-            this.panel23.Location = new System.Drawing.Point(283, 3);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(134, 57);
-            this.panel23.TabIndex = 53;
-            // 
-            // lblD
-            // 
-            this.lblD.AutoSize = true;
-            this.lblD.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.lblD.Location = new System.Drawing.Point(34, 0);
-            this.lblD.Name = "lblD";
-            this.lblD.Size = new System.Drawing.Size(59, 57);
-            this.lblD.TabIndex = 30;
-            this.lblD.Text = "D";
-            this.lblD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblD.Visible = false;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.lblE);
-            this.panel18.Location = new System.Drawing.Point(423, 3);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(134, 57);
-            this.panel18.TabIndex = 52;
-            // 
-            // lblE
-            // 
-            this.lblE.AutoSize = true;
-            this.lblE.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.lblE.Location = new System.Drawing.Point(40, 0);
-            this.lblE.Name = "lblE";
-            this.lblE.Size = new System.Drawing.Size(50, 57);
-            this.lblE.TabIndex = 30;
-            this.lblE.Text = "E";
-            this.lblE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblE.Visible = false;
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.lblF);
-            this.panel22.Location = new System.Drawing.Point(563, 3);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(134, 57);
-            this.panel22.TabIndex = 51;
-            // 
-            // lblF
-            // 
-            this.lblF.AutoSize = true;
-            this.lblF.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.lblF.Location = new System.Drawing.Point(41, 0);
-            this.lblF.Name = "lblF";
-            this.lblF.Size = new System.Drawing.Size(49, 57);
-            this.lblF.TabIndex = 30;
-            this.lblF.Text = "F";
-            this.lblF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblF.Visible = false;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.lblL);
-            this.panel19.Location = new System.Drawing.Point(703, 3);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(134, 57);
-            this.panel19.TabIndex = 48;
-            // 
-            // lblL
-            // 
-            this.lblL.AutoSize = true;
-            this.lblL.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.lblL.Location = new System.Drawing.Point(38, 0);
-            this.lblL.Name = "lblL";
-            this.lblL.Size = new System.Drawing.Size(49, 57);
-            this.lblL.TabIndex = 30;
-            this.lblL.Text = "L";
-            this.lblL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblL.Visible = false;
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.lblS);
-            this.panel20.Location = new System.Drawing.Point(843, 3);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(134, 57);
-            this.panel20.TabIndex = 49;
-            // 
-            // lblS
-            // 
-            this.lblS.AutoSize = true;
-            this.lblS.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.lblS.Location = new System.Drawing.Point(35, 0);
-            this.lblS.Name = "lblS";
-            this.lblS.Size = new System.Drawing.Size(51, 57);
-            this.lblS.TabIndex = 30;
-            this.lblS.Text = "S";
-            this.lblS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblS.Visible = false;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel2.BackgroundImage")));
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox2);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(310, 629);
-            this.flowLayoutPanel2.TabIndex = 57;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(305, 414);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoEllipsis = true;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(981, 182);
-            this.label1.TabIndex = 60;
-            this.label1.Text = "Resultados obtenidos";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 449);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(981, 177);
+            this.tableLayoutPanel4.TabIndex = 40;
             // 
             // tableLayoutPanel3
             // 
@@ -400,6 +230,140 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(981, 63);
             this.tableLayoutPanel3.TabIndex = 59;
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.lblA);
+            this.panel21.Location = new System.Drawing.Point(3, 3);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(134, 57);
+            this.panel21.TabIndex = 50;
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.lblS);
+            this.panel20.Location = new System.Drawing.Point(843, 3);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(134, 57);
+            this.panel20.TabIndex = 49;
+            // 
+            // lblS
+            // 
+            this.lblS.AutoSize = true;
+            this.lblS.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.lblS.Location = new System.Drawing.Point(35, 0);
+            this.lblS.Name = "lblS";
+            this.lblS.Size = new System.Drawing.Size(51, 57);
+            this.lblS.TabIndex = 30;
+            this.lblS.Text = "S";
+            this.lblS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblS.Visible = false;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.lblC);
+            this.panel24.Location = new System.Drawing.Point(143, 3);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(134, 57);
+            this.panel24.TabIndex = 54;
+            // 
+            // lblC
+            // 
+            this.lblC.AutoSize = true;
+            this.lblC.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.lblC.Location = new System.Drawing.Point(33, 0);
+            this.lblC.Name = "lblC";
+            this.lblC.Size = new System.Drawing.Size(54, 57);
+            this.lblC.TabIndex = 30;
+            this.lblC.Text = "C";
+            this.lblC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblC.Visible = false;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.lblL);
+            this.panel19.Location = new System.Drawing.Point(703, 3);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(134, 57);
+            this.panel19.TabIndex = 48;
+            // 
+            // lblL
+            // 
+            this.lblL.AutoSize = true;
+            this.lblL.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.lblL.Location = new System.Drawing.Point(38, 0);
+            this.lblL.Name = "lblL";
+            this.lblL.Size = new System.Drawing.Size(49, 57);
+            this.lblL.TabIndex = 30;
+            this.lblL.Text = "L";
+            this.lblL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblL.Visible = false;
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.lblD);
+            this.panel23.Location = new System.Drawing.Point(283, 3);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(134, 57);
+            this.panel23.TabIndex = 53;
+            // 
+            // lblD
+            // 
+            this.lblD.AutoSize = true;
+            this.lblD.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.lblD.Location = new System.Drawing.Point(34, 0);
+            this.lblD.Name = "lblD";
+            this.lblD.Size = new System.Drawing.Size(59, 57);
+            this.lblD.TabIndex = 30;
+            this.lblD.Text = "D";
+            this.lblD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblD.Visible = false;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.lblF);
+            this.panel22.Location = new System.Drawing.Point(563, 3);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(134, 57);
+            this.panel22.TabIndex = 51;
+            // 
+            // lblF
+            // 
+            this.lblF.AutoSize = true;
+            this.lblF.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.lblF.Location = new System.Drawing.Point(41, 0);
+            this.lblF.Name = "lblF";
+            this.lblF.Size = new System.Drawing.Size(49, 57);
+            this.lblF.TabIndex = 30;
+            this.lblF.Text = "F";
+            this.lblF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF.Visible = false;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.lblE);
+            this.panel18.Location = new System.Drawing.Point(423, 3);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(134, 57);
+            this.panel18.TabIndex = 52;
+            // 
+            // lblE
+            // 
+            this.lblE.AutoSize = true;
+            this.lblE.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.lblE.Location = new System.Drawing.Point(40, 0);
+            this.lblE.Name = "lblE";
+            this.lblE.Size = new System.Drawing.Size(50, 57);
+            this.lblE.TabIndex = 30;
+            this.lblE.Text = "E";
+            this.lblE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblE.Visible = false;
             // 
             // tableLayoutPanel2
             // 
@@ -566,22 +530,42 @@
             this.label10.Text = "A";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel4
+            // label1
             // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Controls.Add(this.button2, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button3, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 449);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(981, 177);
-            this.tableLayoutPanel4.TabIndex = 40;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoEllipsis = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(981, 182);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Resultados obtenidos";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel2.BackgroundImage")));
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox2);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(310, 629);
+            this.flowLayoutPanel2.TabIndex = 57;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(305, 414);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // Resultados
             // 
@@ -597,23 +581,22 @@
             this.panel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -629,7 +612,8 @@
             this.panel3.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -639,7 +623,6 @@
         private System.Windows.Forms.Label lblA;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblC;
         private System.Windows.Forms.Label lblS;
         private System.Windows.Forms.Label lblD;
