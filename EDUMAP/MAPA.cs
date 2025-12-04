@@ -24,7 +24,8 @@ namespace EDUMAP
         public MAPA()
         {
             InitializeComponent();
-            
+            comboBoxmunicipio.DisplayMember = "";
+            comboBoxmunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         
         
@@ -61,20 +62,26 @@ namespace EDUMAP
         }
         private void CargarCarreras()
         {
-            using (MySqlConnection cn = new MySqlConnection(conexion))
+            using (MySqlConnection con = new MySqlConnection(conexion))
             {
-                cn.Open();
-                // Combinar todas las tablas pero sin duplicados
-                string query = string.Join(" UNION ", Array.ConvertAll(tablas, t => $"SELECT DISTINCT Carrera FROM {t}"));
-                MySqlCommand cmd = new MySqlCommand(query, cn);
-                MySqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    string carrera = dr["Carrera"].ToString();
-                    if (!comboBoxcarreras.Items.Contains(carrera))
-                        comboBoxcarreras.Items.Add(carrera);
-                }
-                dr.Close();
+                con.Open();
+
+                string query = @"
+            SELECT DISTINCT nombre
+            FROM carreras
+            WHERE nombre IS NOT NULL AND nombre <> ''
+            ORDER BY nombre ASC";
+
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                comboBoxcarreras.DataSource = dt;
+                comboBoxcarreras.DisplayMember = "nombre";
+
+                comboBoxcarreras.DropDownStyle = ComboBoxStyle.DropDownList;
             }
         }
         private void CargarMunicipios()
@@ -172,6 +179,8 @@ namespace EDUMAP
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
+                
+                
             }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -186,6 +195,8 @@ namespace EDUMAP
 
         private void comboBoxmunicipio_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBoxmunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
+            
             MostrarDatos();
         }
 

@@ -19,7 +19,8 @@ namespace EDUMAP
         public registro()
         {
             InitializeComponent();
-            
+            txtmunicipio.DisplayMember = "";
+            txtmunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         MySqlConnection mconexion = Conexion.ConexionDB();
         
@@ -101,6 +102,11 @@ namespace EDUMAP
             login login = new login();
             login.Show();
             this.Hide();
+        }
+
+        private void txtmunicipio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

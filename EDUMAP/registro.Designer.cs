@@ -92,6 +92,7 @@
             this.txtmunicipio.Name = "txtmunicipio";
             this.txtmunicipio.Size = new System.Drawing.Size(720, 51);
             this.txtmunicipio.TabIndex = 7;
+            this.txtmunicipio.SelectedIndexChanged += new System.EventHandler(this.txtmunicipio_SelectedIndexChanged);
             // 
             // txtcontraseña
             // 

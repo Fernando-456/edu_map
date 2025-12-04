@@ -17,6 +17,8 @@ namespace EDUMAP
         public Carreras()
         {
             InitializeComponent();
+            cbCarreras.DisplayMember = "";
+            cbCarreras.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         string conexion = "server=62.72.5.62; database=EduMap; uid=fer; pwd=1234;";
 
@@ -39,7 +41,11 @@ namespace EDUMAP
             using (MySqlConnection con = new MySqlConnection(conexion))
             {
                 con.Open();
-                string query = "SELECT nombre, ruta_imagen FROM carreras";
+                string query = @"
+            SELECT DISTINCT nombre, ruta_imagen
+            FROM carreras
+            WHERE nombre IS NOT NULL AND nombre <> ''
+            ORDER BY nombre ASC";
 
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 MySqlDataReader dr = cmd.ExecuteReader();
