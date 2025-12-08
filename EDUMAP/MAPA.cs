@@ -1,18 +1,20 @@
-﻿using MySql.Data.MySqlClient;
+﻿using FontAwesome.Sharp;
+using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
+using System;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data;
+using System.Drawing;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System;
-using System.Data;
-using System.Drawing;
-using System.Net;
 using System.Windows.Forms;
 
 namespace EDUMAP
@@ -67,12 +69,19 @@ namespace EDUMAP
             using (MySqlConnection con = new MySqlConnection(conexion))
             {
                 con.Open();
+                string unionQuery = "";
+                for (int i = 0; i < tablas.Length; i++)
+                {
+                    unionQuery += $"SELECT Carrera FROM {tablas[i]} WHERE Carrera IS NOT NULL AND Carrera <> ''";
 
-                string query = @"
-            SELECT DISTINCT nombre
-            FROM carreras
-            WHERE nombre IS NOT NULL AND nombre <> ''
-            ORDER BY nombre ASC";
+                    if (i < tablas.Length - 1)
+                        unionQuery += " UNION ";
+                }
+                // Consulta final ordenada
+                string query = $@"
+                SELECT DISTINCT Carrera
+                FROM ({unionQuery}) AS todas
+                ORDER BY Carrera ASC;";
 
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -81,9 +90,9 @@ namespace EDUMAP
                 da.Fill(dt);
 
                 comboBoxcarreras.DataSource = dt;
-                comboBoxcarreras.DisplayMember = "nombre";
-
+                comboBoxcarreras.DisplayMember = "Carrera";
                 comboBoxcarreras.DropDownStyle = ComboBoxStyle.DropDownList;
+
             }
         }
         private void CargarMunicipios()
@@ -159,6 +168,7 @@ namespace EDUMAP
                                 Tipo_Universidad
                             FROM {tabla}
                             WHERE Carrera=@carrera AND Municipio=@municipio";
+                            
                     }
                 }
 

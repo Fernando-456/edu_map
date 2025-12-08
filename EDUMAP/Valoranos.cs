@@ -76,10 +76,31 @@ namespace EDUMAP
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Gracias por tu opinion");
-                
+                tableLayoutPanel1.Visible = false;
+                flowLayoutPanel1.Visible = false;
+                flowLayoutPanel2.Visible = false;
+                abrirForm(new Inicio());
+
             }
         }
+        private Form FormActual = null;
+        private void abrirForm(Form form)
+        {
+            if (FormActual != null)
+            {
+                FormActual.Close();
+            }
+            FormActual = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel5.Controls.Add(form);
+            panel5.Tag = form;
+            form.BringToFront();
+            form.Show();
 
+
+        }
         private void rdb1_4_CheckedChanged(object sender, EventArgs e)
         {
 
