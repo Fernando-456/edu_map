@@ -32,10 +32,13 @@ namespace EDUMAP
         public static int SI_L;
         public static string usuario;
         public static string contraseña;
+        public static string email;
+        public static int id;
+
         public static Boolean BD;
         public static String Primera_opcion;
         public static String Segunda_opcion;
         public static String Tercera_opcion;
-
+        
     }
 }

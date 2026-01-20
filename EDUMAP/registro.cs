@@ -55,6 +55,7 @@ namespace EDUMAP
                 
                 string consulta = "INSERT INTO registro (Usuario, Email, Contraseña, Municipio) VALUES ('" + txtnombre.Text + "', '" + txtcorreo.Text + "', '" + txtcontraseña.Text + "', '" + txtmunicipio.Text + "')";
                 Global.usuario = txtnombre.Text;
+                
                 string textoCorreo = txtcorreo.Text;
                 string textoMunicipio = txtmunicipio.Text;
                 string numContraseña = txtcontraseña.Text;
@@ -105,6 +106,11 @@ namespace EDUMAP
         }
 
         private void txtmunicipio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcorreo_TextChanged(object sender, EventArgs e)
         {
 
         }

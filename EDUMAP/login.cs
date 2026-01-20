@@ -1,10 +1,12 @@
-﻿using MySql.Data.MySqlClient;
+﻿using FontAwesome.Sharp;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Diagnostics;
@@ -22,20 +24,33 @@ namespace EDUMAP
             InitializeComponent();
             
         }
+        string Encriptar(string texto)
+        {
+            using (SHA256 sha = SHA256.Create())
+            {
+                byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(texto));
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in bytes)
+                    sb.Append(b.ToString("x2"));
+                return sb.ToString();
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                string correo = "";
+                string hashIngresado = Encriptar(txtcontraseña.Text);
                 using (MySqlConnection conexion = new MySqlConnection(conexionBD))
                 {
                     conexion.Open();
 
                     string consulta = "SELECT Usuario, Contraseña FROM registro WHERE Usuario = @Usuario";
 
+
                     using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
                     {
                         comando.Parameters.AddWithValue("@Usuario", txtusuario.Text);
-
                         MySqlDataReader reader = comando.ExecuteReader();
 
                         // Validar campos vacíos
@@ -66,7 +81,7 @@ namespace EDUMAP
                         }
 
                         // Validar contraseña EXACTA
-                        if (txtcontraseña.Text != contraseñaBD)
+                        if (hashIngresado != contraseñaBD)
                         {
                             MessageBox.Show("La contraseña es incorrecta.");
                             return;
@@ -84,6 +99,51 @@ namespace EDUMAP
                 }
 
 
+                using (MySqlConnection conexion = new MySqlConnection(conexionBD))
+                {
+                    conexion.Open();
+
+                    string consulta = "SELECT Email FROM registro WHERE Usuario = @Usuario";
+
+                    using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@Usuario", txtusuario.Text);
+
+                        object resultado = cmd.ExecuteScalar();
+
+                        if (resultado != null)
+                        {
+                            correo = resultado.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró el correo del usuario.");
+                        }
+                    }
+                }
+                Global.email = correo;
+                int idUsuarioLogueado = 0;
+                using (MySqlConnection con = new MySqlConnection(conexionBD))
+                {
+                    con.Open();
+
+                    string query = @"SELECT id 
+                         FROM registro 
+                         WHERE Usuario = @Usuario AND Contraseña = @Contraseña";
+
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Usuario", Global.usuario);
+                    cmd.Parameters.AddWithValue("@Contraseña", Global.contraseña);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        idUsuarioLogueado = reader.GetInt32("id");
+                        Global.id = idUsuarioLogueado;
+                        
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -91,32 +151,35 @@ namespace EDUMAP
             }
         }
 
-        
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
-        }
-
         private void login_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            txtcontraseña.PasswordChar = '•';
+            iconButton2.Visible = false;
+            iconButton1.Visible = true;
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
         {
             txtcontraseña.PasswordChar = '\0';
             iconButton1.Visible = false;
             iconButton2.Visible = true;
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            txtcontraseña.PasswordChar = '•';
-            iconButton2.Visible = false;
-            iconButton1.Visible = true;
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

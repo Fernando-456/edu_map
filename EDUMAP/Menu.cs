@@ -181,5 +181,13 @@ namespace EDUMAP
             flowTITULO.Visible = false;
             abrirForm(new Carreras());
         }
+
+       
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            flowTITULO.Visible = false;
+            abrirForm(new PERFIL());
+        }
     }
 }

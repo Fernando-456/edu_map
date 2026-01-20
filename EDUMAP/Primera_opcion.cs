@@ -187,42 +187,49 @@ namespace EDUMAP
                 CargarDatos_A();
                 lblprimera.Visible = true;
                 lblprimera.Text = "Artístico";
+                Global.Primera_opcion = "Artístico";
             }
             else if (Global.Primera_opcion == Global.SI_E.ToString())
             {
                 CargarDatos_E();
                 lblprimera.Visible = true;
                 lblprimera.Text = "Emprendimiento";
+                Global.Primera_opcion = "Emprendimiento";
             }
             else if (Global.Primera_opcion == Global.SI_C.ToString())
             {
                 CargarDatos_C();
                 lblprimera.Visible = true;
                 lblprimera.Text = "Científico";
+                Global.Primera_opcion = "Científico";
             }
             else if (Global.Primera_opcion == Global.SI_S.ToString())
             {
                 CargarDatos_S();
                 lblprimera.Visible = true;
                 lblprimera.Text = "Social";
+                Global.Primera_opcion = "Social";
             }
             else if (Global.Primera_opcion == Global.SI_D.ToString())
             {
                 CargarDatos_D();
                 lblprimera.Visible = true;
                 lblprimera.Text = "Desarrollo";
+                Global.Primera_opcion = "Desarrollo";
             }
             else if (Global.Primera_opcion == Global.SI_F.ToString())
             {
                 CargarDatos_F();
                 lblprimera.Visible = true;
                 lblprimera.Text = "Finanzas";
+                Global.Primera_opcion = "Finanzas";
             }
             else if (Global.Primera_opcion == Global.SI_L.ToString())
             {
                 CargarDatos_L();
                 lblprimera.Visible = true;
                 lblprimera.Text = "Leyes";
+                Global.Primera_opcion = "Leyes";
             }
         }
         private Form FormActual = null;

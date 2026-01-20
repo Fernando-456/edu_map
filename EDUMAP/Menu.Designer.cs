@@ -36,6 +36,7 @@
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -121,7 +122,7 @@
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(3, 359);
+            this.iconButton4.Location = new System.Drawing.Point(3, 436);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(315, 71);
             this.iconButton4.TabIndex = 27;
@@ -134,6 +135,7 @@
             this.flowLayoutPanel6.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel6.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel6.Controls.Add(this.iconButton1);
+            this.flowLayoutPanel6.Controls.Add(this.iconButton2);
             this.flowLayoutPanel6.Controls.Add(this.iconButton4);
             this.flowLayoutPanel6.Controls.Add(this.button2);
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Left;
@@ -148,13 +150,31 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 436);
+            this.button2.Location = new System.Drawing.Point(3, 513);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(315, 71);
             this.button2.TabIndex = 28;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(3, 359);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(315, 71);
+            this.iconButton2.TabIndex = 30;
+            this.iconButton2.Text = "Perfil";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click_1);
             // 
             // panel1
             // 
@@ -297,5 +317,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

@@ -12,6 +12,25 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\juanf\Downloads\EduMap\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>EduMap</ProductName>
+    <PublisherName>EduMap</PublisherName>
+    <SuiteName>EduMap</SuiteName>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.1512.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +50,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>edumap_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9C9D20F88ECF1A97AA7AFAD0D9D3C365B4F37E36</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>EDUMAP%28version1%29_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
@@ -163,6 +197,12 @@
     <Compile Include="OCUPACIONES.Designer.cs">
       <DependentUpon>OCUPACIONES.cs</DependentUpon>
     </Compile>
+    <Compile Include="PERFIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PERFIL.Designer.cs">
+      <DependentUpon>PERFIL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Primera_opcion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +271,9 @@
     <EmbeddedResource Include="OCUPACIONES.resx">
       <DependentUpon>OCUPACIONES.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PERFIL.resx">
+      <DependentUpon>PERFIL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Primera_opcion.resx">
       <DependentUpon>Primera_opcion.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +302,7 @@
     <EmbeddedResource Include="Valoranos.resx">
       <DependentUpon>Valoranos.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="EDUMAP%28version1%29_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -272,6 +316,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="edumap_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
