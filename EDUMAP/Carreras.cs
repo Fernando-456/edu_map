@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +20,7 @@ namespace EDUMAP
             cbCarreras.DisplayMember = "";
             cbCarreras.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-        string conexion = "server=62.72.5.62; database=EduMap; uid=fer; pwd=1234;";
+        
 
         private void Carreras_Load(object sender, EventArgs e)
         {
@@ -36,28 +36,41 @@ namespace EDUMAP
                 return Nombre; // Esto hará que el ComboBox muestre solo el nombre
             }
         }
+        
         private void CargarCarreras()
         {
-            using (MySqlConnection con = new MySqlConnection(conexion))
+            try
             {
-                con.Open();
-                string query = @"
-            SELECT DISTINCT nombre, ruta_imagen
-            FROM carreras
-            WHERE nombre IS NOT NULL AND nombre <> ''
-            ORDER BY nombre ASC";
-
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                MySqlDataReader dr = cmd.ExecuteReader();
-
-                while (dr.Read())
+                using (NpgsqlConnection con = Conexion.ConexionDB())
                 {
-                    cbCarreras.Items.Add(new Carreras_
+                    con.Open();
+
+                    string query = @"
+                        SELECT DISTINCT nombre, ruta_imagen
+                        FROM carreras
+                        WHERE nombre IS NOT NULL AND nombre <> ''
+                        ORDER BY nombre ASC";
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, con))
                     {
-                        Nombre = dr["nombre"].ToString(),
-                        RutaImagen = dr["ruta_imagen"].ToString()
-                    });
+                        using (NpgsqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            cbCarreras.Items.Clear();
+                            while (dr.Read())
+                            {
+                                cbCarreras.Items.Add(new Carreras_
+                                {
+                                    Nombre = dr["nombre"]?.ToString() ?? string.Empty,
+                                    RutaImagen = dr["ruta_imagen"]?.ToString() ?? string.Empty
+                                });
+                            }
+                        }
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar carreras: " + ex.Message);
             }
         }
 

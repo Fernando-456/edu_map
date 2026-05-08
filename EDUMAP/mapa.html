@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mapa Universidades</title>
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        let map;
+        let markers = [];
+        let infoWindow;
+
+        function initMap() {
+            const mexico = { lat: 23.6345, lng: -102.5528 };
+
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 5,
+                center: mexico
+            });
+
+            infoWindow = new google.maps.InfoWindow();
+        }
+
+        function agregarMarcador(lat, lng, universidad, detalle) {
+            if (!map) return;
+
+            const marker = new google.maps.Marker({
+                position: { lat: lat, lng: lng },
+                map: map,
+                title: universidad
+            });
+
+            marker.addListener("click", () => {
+                infoWindow.setContent("<b>" + universidad + "</b><br>" + detalle);
+                infoWindow.open(map, marker);
+            });
+
+            markers.push(marker);
+        }
+
+        function limpiarMarcadores() {
+            for (let i = 0; i < markers.length; i++) {
+                markers[i].setMap(null);
+            }
+            markers = [];
+        }
+
+        function enfocarMarcador(lat, lng) {
+            if (!map) return;
+            map.setCenter({ lat: lat, lng: lng });
+            map.setZoom(15);
+        }
+    </script>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsmdGSaDgvWETVo5QX0pVvr3_KyARVl2A&callback=initMap"></script>
+</body>
+</html>

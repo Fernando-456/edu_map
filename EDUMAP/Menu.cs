@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,52 +9,47 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 
 namespace EDUMAP
 {
     public partial class Menu : Form
     {
-        private Size originalFormSize;
-        private Size originalLabelSize;
-        private float originalLabelFontSize;
         public Menu()
         {
             InitializeComponent();
         }
-        private Form FormActual = null;
-        // Agregar este campo a la clase MAPA
+
         
+        private Form FormActual = null;
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            
         }
-        private void abrirForm (Form form)
+
+        private void abrirForm(Form form)
         {
             if (FormActual != null)
             {
                 FormActual.Close();
             }
+
             FormActual = form;
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
             panel1.Controls.Add(form);
             panel1.Tag = form;
             form.BringToFront();
             form.Show();
 
-
         }
-
-
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            // Solución: Necesitas una instancia de Valoranos para llamar a Close()
-            // Si tienes una instancia abierta, ciérrala. Por ejemplo, si la abriste con abrirForm(new Valoranos()),
-            // puedes buscarla en los controles del panel.
             foreach (Control ctrl in this.panel1.Controls)
             {
                 if (ctrl is Valoranos valoranosForm)
@@ -62,132 +58,227 @@ namespace EDUMAP
                     break;
                 }
             }
+
             flowTITULO.Visible = false;
-            abrirForm(new Inicio());
+            panelControl.Visible = false;
+            abrirFormMenu(new Menu());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            
             flowTITULO.Visible = false;
             abrirForm(new Valoranos());
         }
 
         private void Menu_Resize(object sender, EventArgs e)
         {
+        }
+
+        
+        private void abrirFormMenu(Form form)
+        {
+            if (FormActual != null)
+            {
+                FormActual.Close();
+            }
+
+            FormActual = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            panelFONDO.Controls.Clear();
+            panelFONDO.Controls.Add(form);
+            panelFONDO.Tag = form;
+            form.BringToFront();
+            form.Show();
+
+        }
         
 
-        }
-
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        /// <summary>
+        /// Carga los resultados de Fase 1 desde BD a Global.PuntajesFase1
+        /// </summary>
+        private bool CargarResultadosFase1(string usuario)
         {
-
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-            flowTITULO.Visible = false;
-            abrirForm(new INTERESES());
-        }
-
-        private void pictureBox4_Click_1(object sender, EventArgs e)
-        {
-            flowTITULO.Visible = false;
-            abrirForm(new MAPA());
-        }
-
-        private void pictureBox3_Click_1(object sender, EventArgs e)
-        {
-            string conexionString = "Server=62.72.5.62;Database=EduMap;Uid=fer;Pwd=1234;";
-
-            using (MySqlConnection conexion = new MySqlConnection(conexionString))
+            using (NpgsqlConnection conexion = Conexion.ConexionDB())
             {
-                try
+                conexion.Open();
+
+                string query = @"
+                SELECT campo_a, campo_c, campo_d, campo_e, campo_f, campo_l, campo_s
+                FROM resultados
+                WHERE usuario = @usuario";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conexion))
                 {
-                    conexion.Open();
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
 
-                    // Trae todos los campos de la tabla
-                    string query = @"SELECT Usuario, campo_A, campo_E, campo_C, campo_S, campo_D, campo_F, campo_L FROM resultados WHERE Usuario = @Usuario";
-                    MySqlCommand cmd = new MySqlCommand(query, conexion);
-                    cmd.Parameters.AddWithValue("@Usuario", Global.usuario);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
                     {
-                        if (reader.Read())
-                        {
-                            // Verificar si todos están vacíos
-                            bool todosVacios = true;
-                            for (int i = 0; i < 7; i++)
-                            {
-                                if (!reader.IsDBNull(i) && !string.IsNullOrWhiteSpace(reader.GetString(i)))
-                                {
-                                    todosVacios = false;
-                                    break;
-                                }
-                            }
+                        if (!reader.Read())
+                            return false;
 
-                            if (todosVacios)
-                            {
-                                MessageBox.Show("Necesitas hacer el test.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return;
-                            }
+                        Global.PuntajesFase1[0] = reader.IsDBNull(0) ? 0 : Convert.ToInt32(reader[0]); // A
+                        Global.PuntajesFase1[1] = reader.IsDBNull(1) ? 0 : Convert.ToInt32(reader[1]); // C
+                        Global.PuntajesFase1[2] = reader.IsDBNull(2) ? 0 : Convert.ToInt32(reader[2]); // D
+                        Global.PuntajesFase1[3] = reader.IsDBNull(3) ? 0 : Convert.ToInt32(reader[3]); // E
+                        Global.PuntajesFase1[4] = reader.IsDBNull(4) ? 0 : Convert.ToInt32(reader[4]); // F
+                        Global.PuntajesFase1[5] = reader.IsDBNull(5) ? 0 : Convert.ToInt32(reader[5]); // L
+                        Global.PuntajesFase1[6] = reader.IsDBNull(6) ? 0 : Convert.ToInt32(reader[6]); // S
 
-                            // Obtener los valores de cada campo
-
-
-
-                            string campoA = reader.IsDBNull(1) ? "" : reader.GetValue(1).ToString();
-                            string campoE = reader.IsDBNull(2) ? "" : reader.GetValue(2).ToString();
-                            string campoC = reader.IsDBNull(3) ? "" : reader.GetValue(3).ToString();
-                            string campoS = reader.IsDBNull(4) ? "" : reader.GetValue(4).ToString();
-                            string campoD = reader.IsDBNull(5) ? "" : reader.GetValue(5).ToString();
-                            string campoF = reader.IsDBNull(6) ? "" : reader.GetValue(6).ToString();
-                            string campoL = reader.IsDBNull(7) ? "" : reader.GetValue(7).ToString();
-
-                            Global.SI_A = int.TryParse(campoA, out int valA) ? valA : 0;
-                            Global.SI_E = int.TryParse(campoE, out int valE) ? valE : 0;
-                            Global.SI_C = int.TryParse(campoC, out int valC) ? valC : 0;
-                            Global.SI_S = int.TryParse(campoS, out int valS) ? valS : 0;
-                            Global.SI_D = int.TryParse(campoD, out int valD) ? valD : 0;
-                            Global.SI_F = int.TryParse(campoF, out int valF) ? valF : 0;
-                            Global.SI_L = int.TryParse(campoL, out int valL) ? valL : 0;
-
-                            // Enviar los valores al Form2
-                            flowTITULO.Visible = false;
-                            abrirForm(new Resultados());
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Necesitas realizar el TEST", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        return true;
                     }
                 }
-                catch (Exception ex)
+            }
+        }
+        private bool CargarResultadosFase2(string usuario)
+        {
+            using (NpgsqlConnection conexion = Conexion.ConexionDB())
+            {
+                conexion.Open();
+
+                string query = @"
+            SELECT 
+                r1,r2,r3,r4,r5,r6,r7,r8,
+                r9,r10,r11,r12,r13,r14,r15,r16,
+                r17,r18,r19,r20,r21,r22,r23,r24,
+                r25,r26,r27,r28,r29,r30,r31,r32
+            FROM resultados_fase2
+            WHERE usuario = @usuario";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conexion))
                 {
-                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (!reader.Read())
+                            return false;
+
+                        Global.RespuestasUsuario = new int[32];
+
+                        for (int i = 0; i < 32; i++)
+                        {
+                            Global.RespuestasUsuario[i] = reader.IsDBNull(i)
+                                ? 0
+                                : Convert.ToInt32(reader.GetValue(i));
+                        }
+
+                        return true;
+                    }
+                }
+            }
+        }
+        /// <summary>
+        /// Valida si el usuario tiene registro de resultados en la tabla resultados
+        /// </summary>
+        private bool TieneResultadosFase1(string usuario)
+        {
+            using (NpgsqlConnection conexion = Conexion.ConexionDB())
+            {
+                conexion.Open();
+
+                string query = "SELECT COUNT(*) FROM resultados WHERE usuario = @usuario";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    int cantidad = Convert.ToInt32(cmd.ExecuteScalar());
+                    return cantidad > 0;
                 }
             }
         }
 
-        private void pictureBox5_Click_1(object sender, EventArgs e)
+        /// <summary>
+        /// Valida si todos los puntajes de Fase 1 están en cero
+        /// </summary>
+        private bool ResultadosFase1Vacios()
         {
-            flowTITULO.Visible = false;
-            abrirForm(new Carreras());
-        }
+            for (int i = 0; i < Global.PuntajesFase1.Length; i++)
+            {
+                if (Global.PuntajesFase1[i] != 0)
+                    return false;
+            }
 
-       
+            return true;
+        }
 
         private void iconButton2_Click_1(object sender, EventArgs e)
         {
             flowTITULO.Visible = false;
             abrirForm(new PERFIL());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            flowTITULO.Visible = false;
+            abrirForm(new MENU_TEST());
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(Global.usuario))
+                {
+                    MessageBox.Show("No hay un usuario activo.");
+                    return;
+                }
+
+                Global.ReiniciarFase1();
+
+                if (!TieneResultadosFase1(Global.usuario))
+                {
+                    MessageBox.Show("Primero debes realizar el test.");
+                    return;
+                }
+
+                if (!CargarResultadosFase1(Global.usuario))
+                {
+                    MessageBox.Show("No se pudieron cargar los resultados de Fase 1.");
+                    return;
+                }
+
+                if (ResultadosFase1Vacios())
+                {
+                    MessageBox.Show("Necesitas hacer el test.");
+                    return;
+                }
+
+                // ESTA PARTE ES LA QUE FALTABA
+                if (!CargarResultadosFase2(Global.usuario))
+                {
+                    MessageBox.Show("Falta completar la Fase 2 para poder calcular carreras.");
+                    return;
+                }
+
+                flowTITULO.Visible = false;
+                
+                abrirForm(new FASE3());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar resultados: " + ex.Message);
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            flowTITULO.Visible = false;
+            panelControl.Visible = false;
+            abrirForm(new MAPA());
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            flowTITULO.Visible = false;
+            abrirForm(new Carreras());
         }
     }
 }

@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using System.Security.Cryptography;
-using System.Text;
+
 
 
 namespace EDUMAP
 {
     public partial class PERFIL : Form
     {
-        string conexion = "server=62.72.5.62 ;database=EduMap;user=fer;password=1234;";
+        string conexion = "server=62.72.5.62 ;database=EduMap;user=Fer;password=M#9402949Mmn1;";
 
         public PERFIL()
         {
@@ -31,7 +31,7 @@ namespace EDUMAP
 
         }
         
-        private void PERFIL_Load(object sender, EventArgs e)
+        /*private void PERFIL_Load(object sender, EventArgs e)
         {
             
             label2.Text = Global.usuario;
@@ -136,7 +136,7 @@ namespace EDUMAP
             txttercera.Text = Global.Tercera_opcion;
              
         }
-
+        */
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
 

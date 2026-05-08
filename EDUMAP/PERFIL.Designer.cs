@@ -408,7 +408,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PERFIL";
             this.Text = "PERFIL";
-            this.Load += new System.EventHandler(this.PERFIL_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);

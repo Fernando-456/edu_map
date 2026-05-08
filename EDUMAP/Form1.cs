@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using Npgsql;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,14 +25,14 @@ namespace EDUMAP
         public Form1()
         {
             InitializeComponent();
-            
+
         }
-        
+
         private void Form1_Resize(object sender, EventArgs e)
         {
-            
+
         }
-      
+
         private void Form1_Load(object sender, EventArgs e)
         {
             OcultarVisualStudio();
@@ -83,12 +84,12 @@ namespace EDUMAP
                 // Ajustar el tamaño y la posición de los controles para pantalla normal
             }
         }
-       
+
         private void Form1_ResizeEnd(object sender, EventArgs e)
         {
             FormResize();
         }
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -99,7 +100,7 @@ namespace EDUMAP
 
         private void btnregistro_Click_1(object sender, EventArgs e)
         {
-            registro reg = new registro();
+            registro reg = new registro(this);
             reg.Show();
             this.Hide();
         }
@@ -113,6 +114,7 @@ namespace EDUMAP
         {
 
         }
+        
     }
 }
 

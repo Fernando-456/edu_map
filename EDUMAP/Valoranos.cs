@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,16 +57,16 @@ namespace EDUMAP
                 return;
             }
 
-            string conexion = "server=62.72.5.62; database=EduMap; uid=fer; pwd=1234;";
-            
-            using (MySqlConnection conn = new MySqlConnection(conexion))
+
+
+            using (NpgsqlConnection conexion = Conexion.ConexionDB())
             {
-                conn.Open();
+                conexion.Open();
                 
                 string sql = @"INSERT INTO valoracion (Pregunta_1, Pregunta_2, Pregunta_3, Pregunta_4, Usuario)
                        VALUES (@p1, @p2, @p3, @p4, @Usuario);";
 
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conexion);
                 cmd.Parameters.AddWithValue("@Usuario", Global.usuario);
                 cmd.Parameters.AddWithValue("@p1", r1);
                 cmd.Parameters.AddWithValue("@p2", r2);
@@ -76,10 +76,9 @@ namespace EDUMAP
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Gracias por tu opinion");
-                tableLayoutPanel1.Visible = false;
-                flowLayoutPanel1.Visible = false;
-                flowLayoutPanel2.Visible = false;
-                abrirForm(new Inicio());
+                
+                
+                
 
             }
         }
@@ -107,6 +106,11 @@ namespace EDUMAP
         }
 
         private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel5_Paint(object sender, PaintEventArgs e)
         {
 
         }

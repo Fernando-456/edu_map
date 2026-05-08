@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Npgsql;
+using System.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,27 +12,24 @@ namespace EDUMAP
     public static class Conexion
     {
 
-        public static MySqlConnection ConexionDB()
+        public static NpgsqlConnection ConexionDB()
         {
-            string server = "62.72.5.62";
-            string database = "EduMap";
-            string user = "fer";
-            string password = "1234";
-            string cadenaconexion = $"server={server}; database={database}; User={user}; Password={password};";
             try
             {
-                MySqlConnection conexion = new MySqlConnection(cadenaconexion);
-               
+                string cadenaConexion = ConfigurationManager
+                                        .ConnectionStrings["EduMapDB"]
+                                        .ConnectionString;
+
+                NpgsqlConnection conexion = new NpgsqlConnection(cadenaConexion);
                 return conexion;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error al conectar a la base de datos: " + ex.Message);
+                MessageBox.Show("Error al conectar: " + ex.Message);
                 return null;
             }
-
         }
-        
+
 
     }
 }

@@ -13,6 +13,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>C:\Users\juanf\Downloads\EduMap\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,9 +28,10 @@
     <ProductName>EduMap</ProductName>
     <PublisherName>EduMap</PublisherName>
     <SuiteName>EduMap</SuiteName>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.1512.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -40,7 +43,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>1</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -88,14 +91,37 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.10\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3856.49, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3856.49\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.3856.49, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3856.49\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.3856.49, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3856.49\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=9.5.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.9.5.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=6.0.8.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.6.0.8\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.6.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -119,10 +145,22 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.6.0.0\lib\net461\System.Threading.Channels.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -145,6 +183,12 @@
     <Compile Include="ANIMACION.Designer.cs">
       <DependentUpon>ANIMACION.cs</DependentUpon>
     </Compile>
+    <Compile Include="cardUniversidades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cardUniversidades.Designer.cs">
+      <DependentUpon>cardUniversidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Carreras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,26 +196,25 @@
       <DependentUpon>Carreras.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DAO\MunicipioDAO.cs" />
+    <Compile Include="DAO\UbicacionService.cs" />
+    <Compile Include="DAO\UbicacionSyncService.cs" />
+    <Compile Include="DAO\UniversidadDAO.cs" />
+    <Compile Include="FASE3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FASE3.Designer.cs">
+      <DependentUpon>FASE3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HABILIDADES.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HABILIDADES.Designer.cs">
-      <DependentUpon>HABILIDADES.cs</DependentUpon>
-    </Compile>
+    <Compile Include="GeocodingService.cs" />
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="INTERESES.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="INTERESES.Designer.cs">
-      <DependentUpon>INTERESES.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -191,23 +234,17 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="OCUPACIONES.cs">
+    <Compile Include="MENU_TEST.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OCUPACIONES.Designer.cs">
-      <DependentUpon>OCUPACIONES.cs</DependentUpon>
+    <Compile Include="MENU_TEST.Designer.cs">
+      <DependentUpon>MENU_TEST.cs</DependentUpon>
     </Compile>
     <Compile Include="PERFIL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PERFIL.Designer.cs">
       <DependentUpon>PERFIL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Primera_opcion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Primera_opcion.Designer.cs">
-      <DependentUpon>Primera_opcion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -217,23 +254,23 @@
     <Compile Include="registro.Designer.cs">
       <DependentUpon>registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resultados.cs">
+    <Compile Include="RESULTADO_FASE1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resultados.Designer.cs">
-      <DependentUpon>Resultados.cs</DependentUpon>
+    <Compile Include="RESULTADO_FASE1.Designer.cs">
+      <DependentUpon>RESULTADO_FASE1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Segunda_opcion.cs">
+    <Compile Include="TEST.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Segunda_opcion.Designer.cs">
-      <DependentUpon>Segunda_opcion.cs</DependentUpon>
+    <Compile Include="TEST.Designer.cs">
+      <DependentUpon>TEST.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tercera_opcion.cs">
+    <Compile Include="TEST_FASE2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tercera_opcion.Designer.cs">
-      <DependentUpon>Tercera_opcion.cs</DependentUpon>
+    <Compile Include="TEST_FASE2.Designer.cs">
+      <DependentUpon>TEST_FASE2.cs</DependentUpon>
     </Compile>
     <Compile Include="Valoranos.cs">
       <SubType>Form</SubType>
@@ -244,20 +281,20 @@
     <EmbeddedResource Include="ANIMACION.resx">
       <DependentUpon>ANIMACION.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="cardUniversidades.resx">
+      <DependentUpon>cardUniversidades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Carreras.resx">
       <DependentUpon>Carreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FASE3.resx">
+      <DependentUpon>FASE3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HABILIDADES.resx">
-      <DependentUpon>HABILIDADES.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="INTERESES.resx">
-      <DependentUpon>INTERESES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -268,17 +305,14 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OCUPACIONES.resx">
-      <DependentUpon>OCUPACIONES.cs</DependentUpon>
+    <EmbeddedResource Include="MENU_TEST.resx">
+      <DependentUpon>MENU_TEST.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PERFIL.resx">
       <DependentUpon>PERFIL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Primera_opcion.resx">
-      <DependentUpon>Primera_opcion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -290,18 +324,19 @@
     <EmbeddedResource Include="registro.resx">
       <DependentUpon>registro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resultados.resx">
-      <DependentUpon>Resultados.cs</DependentUpon>
+    <EmbeddedResource Include="RESULTADO_FASE1.resx">
+      <DependentUpon>RESULTADO_FASE1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Segunda_opcion.resx">
-      <DependentUpon>Segunda_opcion.cs</DependentUpon>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>TEST.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tercera_opcion.resx">
-      <DependentUpon>Tercera_opcion.cs</DependentUpon>
+    <EmbeddedResource Include="TEST_FASE2.resx">
+      <DependentUpon>TEST_FASE2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Valoranos.resx">
       <DependentUpon>Valoranos.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="EDUMAP%28version1%29_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -318,7 +353,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="edumap.ico" />
     <Content Include="edumap_icon.ico" />
+    <Content Include="mapa.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -333,4 +372,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.3856.49\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.3856.49\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.3856.49\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.3856.49\build\Microsoft.Web.WebView2.targets')" />
 </Project>

@@ -1,24 +1,34 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Npgsql;
 using System;
+using System.Linq;
 using System.Windows.Forms;
+using static EDUMAP.Global;
 
 namespace EDUMAP
 {
     internal class Inicio : Form
     {
+        private Panel panelControl;
+        private PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private Button button2;
         private Panel panel1;
-        private Label label1;
         private TableLayoutPanel flowTITULO;
+        private Label label2;
+        private Label label1;
         private TableLayoutPanel tableLayoutPanel1;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private Label label2;
+        private Panel panelFONDO;
+        
 
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
+            this.panelFONDO = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -28,6 +38,12 @@ namespace EDUMAP
             this.flowTITULO = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelFONDO.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -35,18 +51,30 @@ namespace EDUMAP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowTITULO.SuspendLayout();
+            this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panelFONDO
+            // 
+            this.panelFONDO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(220)))), ((int)(((byte)(255)))));
+            this.panelFONDO.Controls.Add(this.panel1);
+            this.panelFONDO.Controls.Add(this.panelControl);
+            this.panelFONDO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFONDO.Location = new System.Drawing.Point(0, 0);
+            this.panelFONDO.Name = "panelFONDO";
+            this.panelFONDO.Size = new System.Drawing.Size(1771, 757);
+            this.panelFONDO.TabIndex = 34;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(220)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.flowTITULO);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(322, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1071, 628);
-            this.panel1.TabIndex = 34;
+            this.panel1.Size = new System.Drawing.Size(1449, 757);
+            this.panel1.TabIndex = 37;
             // 
             // tableLayoutPanel1
             // 
@@ -65,47 +93,47 @@ namespace EDUMAP
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00001F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1071, 520);
-            this.tableLayoutPanel1.TabIndex = 33;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1449, 649);
+            this.tableLayoutPanel1.TabIndex = 38;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 262);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 327);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(529, 255);
+            this.pictureBox4.Size = new System.Drawing.Size(718, 319);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 20;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(538, 262);
+            this.pictureBox5.Location = new System.Drawing.Point(727, 327);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(530, 255);
+            this.pictureBox5.Size = new System.Drawing.Size(719, 319);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(538, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(727, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(530, 253);
+            this.pictureBox3.Size = new System.Drawing.Size(719, 318);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -114,7 +142,7 @@ namespace EDUMAP
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(529, 253);
+            this.pictureBox2.Size = new System.Drawing.Size(718, 318);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
@@ -133,8 +161,8 @@ namespace EDUMAP
             this.flowTITULO.RowCount = 2;
             this.flowTITULO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.flowTITULO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.flowTITULO.Size = new System.Drawing.Size(1071, 108);
-            this.flowTITULO.TabIndex = 0;
+            this.flowTITULO.Size = new System.Drawing.Size(1449, 108);
+            this.flowTITULO.TabIndex = 37;
             // 
             // label2
             // 
@@ -144,7 +172,7 @@ namespace EDUMAP
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(3, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1065, 54);
+            this.label2.Size = new System.Drawing.Size(1443, 54);
             this.label2.TabIndex = 13;
             this.label2.Text = "Tu camino a la universidad comienza aquí.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,19 +186,94 @@ namespace EDUMAP
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1065, 54);
+            this.label1.Size = new System.Drawing.Size(1443, 54);
             this.label1.TabIndex = 8;
             this.label1.Text = "Bienvenido a EduMap";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.UseCompatibleTextRendering = true;
             // 
+            // panelControl
+            // 
+            this.panelControl.BackColor = System.Drawing.Color.White;
+            this.panelControl.Controls.Add(this.iconButton1);
+            this.panelControl.Controls.Add(this.iconButton4);
+            this.panelControl.Controls.Add(this.button2);
+            this.panelControl.Controls.Add(this.pictureBox1);
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControl.Location = new System.Drawing.Point(0, 0);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(322, 757);
+            this.panelControl.TabIndex = 34;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(3, 282);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(315, 71);
+            this.iconButton1.TabIndex = 31;
+            this.iconButton1.Text = "Inicio";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(118)))), ((int)(((byte)(157)))));
+            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.ForeColor = System.Drawing.Color.White;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Star;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(3, 359);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(315, 71);
+            this.iconButton4.TabIndex = 32;
+            this.iconButton4.Text = "Valoranos";
+            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(3, 435);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(315, 71);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Salir";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(315, 273);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // Inicio
             // 
-            this.ClientSize = new System.Drawing.Size(1071, 628);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1771, 757);
+            this.Controls.Add(this.panelFONDO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.panelFONDO.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -180,207 +283,244 @@ namespace EDUMAP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flowTITULO.ResumeLayout(false);
             this.flowTITULO.PerformLayout();
+            this.panelControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
+
         public Inicio()
         {
             InitializeComponent();
+            
         }
-        private void flowTITULO_Paint(object sender, PaintEventArgs e)
-        {
+        
+        private Form FormActual = null;
 
-        }
         private void abrirForm(Form form)
         {
-            if (this.panel1.Controls.Count > 0)
-                this.panel1.Controls.RemoveAt(0);
-            Form fh = form as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(fh);
-            this.panel1.Tag = fh;
-            fh.Show();
-
-        }
-        private void pictureBox2_Click(object sender, System.EventArgs e)
-        {
-            flowTITULO.Visible = false;
-            abrirForm(new INTERESES());
-        }
-
-        private void pictureBox3_Click(object sender, System.EventArgs e)
-        {
-            string conexionString = "Server=62.72.5.62;Database=EduMap;Uid=fer;Pwd=1234;";
-
-            using (MySqlConnection conexion = new MySqlConnection(conexionString))
+            if (FormActual != null)
             {
-                try
+                FormActual.Close();
+            }
+
+            FormActual = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add(form);
+            panel1.Tag = form;
+            form.BringToFront();
+            form.Show();
+
+        }
+        private void abrirFormMenu(Form form)
+        {
+            if (FormActual != null)
+            {
+                FormActual.Close();
+            }
+
+            FormActual = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            panelFONDO.Controls.Clear();
+            panelFONDO.Controls.Add(form);
+            panelFONDO.Tag = form;
+            form.BringToFront();
+            form.Show();
+
+        }
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in this.panel1.Controls)
+            {
+                if (ctrl is Valoranos valoranosForm)
                 {
-                    conexion.Open();
-
-                    // Trae todos los campos de la tabla
-                    string query = @"SELECT Usuario, campo_A, campo_E, campo_C, campo_S, campo_D, campo_F, campo_L FROM resultados WHERE Usuario = @Usuario";
-                    MySqlCommand cmd = new MySqlCommand(query, conexion);
-                    cmd.Parameters.AddWithValue("@Usuario", Global.usuario);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            // Verificar si todos están vacíos
-                            bool todosVacios = true;
-                            for (int i = 0; i < 7; i++)
-                            {
-                                if (!reader.IsDBNull(i) && !string.IsNullOrWhiteSpace(reader.GetString(i)))
-                                {
-                                    todosVacios = false;
-                                    break;
-                                }
-                            }
-
-                            if (todosVacios)
-                            {
-                                MessageBox.Show("Necesitas hacer el test.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return;
-                            }
-
-                            // Obtener los valores de cada campo
-
-
-
-                            string campoA = reader.IsDBNull(1) ? "" : reader.GetValue(1).ToString();
-                            string campoE = reader.IsDBNull(2) ? "" : reader.GetValue(2).ToString();
-                            string campoC = reader.IsDBNull(3) ? "" : reader.GetValue(3).ToString();
-                            string campoS = reader.IsDBNull(4) ? "" : reader.GetValue(4).ToString();
-                            string campoD = reader.IsDBNull(5) ? "" : reader.GetValue(5).ToString();
-                            string campoF = reader.IsDBNull(6) ? "" : reader.GetValue(6).ToString();
-                            string campoL = reader.IsDBNull(7) ? "" : reader.GetValue(7).ToString();
-
-                            Global.SI_A = int.TryParse(campoA, out int valA) ? valA : 0;
-                            Global.SI_E = int.TryParse(campoE, out int valE) ? valE : 0;
-                            Global.SI_C = int.TryParse(campoC, out int valC) ? valC : 0;
-                            Global.SI_S = int.TryParse(campoS, out int valS) ? valS : 0;
-                            Global.SI_D = int.TryParse(campoD, out int valD) ? valD : 0;
-                            Global.SI_F = int.TryParse(campoF, out int valF) ? valF : 0;
-                            Global.SI_L = int.TryParse(campoL, out int valL) ? valL : 0;
-
-                            // Enviar los valores al Form2
-                            flowTITULO.Visible = false;
-                            abrirForm(new Resultados());
-                        }
-                        else
-                        {
-                            MessageBox.Show("Necesitas realizar el TEST", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
+                    valoranosForm.Close();
+                    break;
                 }
             }
+
+            flowTITULO.Visible = false;
+            panelControl.Visible= false;
+            abrirFormMenu(new Menu());
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        
+
+        private void iconButton4_Click(object sender, EventArgs e)
         {
             flowTITULO.Visible = false;
-            abrirForm(new MAPA());
+            abrirForm(new Valoranos());
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            flowTITULO.Visible = false;
-            abrirForm(new Carreras());
+            Application.Exit();
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             flowTITULO.Visible = false;
-            abrirForm(new INTERESES());
+            abrirForm(new MENU_TEST());
         }
 
-        private void pictureBox3_Click_1(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
-            string conexionString = "Server=62.72.5.62;Database=EduMap;Uid=fer;Pwd=1234;";
-
-            using (MySqlConnection conexion = new MySqlConnection(conexionString))
+            flowTITULO.Visible = false;
+            panelControl.Visible = false;
+            abrirForm(new MAPA());
+        }
+        private bool CargarResultadosFase1(string usuario)
+        {
+            using (NpgsqlConnection conexion = Conexion.ConexionDB())
             {
-                try
+                conexion.Open();
+
+                string query = @"
+                SELECT campo_a, campo_c, campo_d, campo_e, campo_f, campo_l, campo_s
+                FROM resultados
+                WHERE usuario = @usuario";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conexion))
                 {
-                    conexion.Open();
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
 
-                    // Trae todos los campos de la tabla
-                    string query = @"SELECT Usuario, campo_A, campo_E, campo_C, campo_S, campo_D, campo_F, campo_L FROM resultados WHERE Usuario = @Usuario";
-                    MySqlCommand cmd = new MySqlCommand(query, conexion);
-                    cmd.Parameters.AddWithValue("@Usuario", Global.usuario);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
                     {
-                        if (reader.Read())
-                        {
-                            // Verificar si todos están vacíos
-                            bool todosVacios = true;
-                            for (int i = 0; i < 7; i++)
-                            {
-                                if (!reader.IsDBNull(i) && !string.IsNullOrWhiteSpace(reader.GetString(i)))
-                                {
-                                    todosVacios = false;
-                                    break;
-                                }
-                            }
+                        if (!reader.Read())
+                            return false;
 
-                            if (todosVacios)
-                            {
-                                MessageBox.Show("Necesitas hacer el test.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return;
-                            }
+                        Global.PuntajesFase1[0] = reader.IsDBNull(0) ? 0 : Convert.ToInt32(reader[0]); // A
+                        Global.PuntajesFase1[1] = reader.IsDBNull(1) ? 0 : Convert.ToInt32(reader[1]); // C
+                        Global.PuntajesFase1[2] = reader.IsDBNull(2) ? 0 : Convert.ToInt32(reader[2]); // D
+                        Global.PuntajesFase1[3] = reader.IsDBNull(3) ? 0 : Convert.ToInt32(reader[3]); // E
+                        Global.PuntajesFase1[4] = reader.IsDBNull(4) ? 0 : Convert.ToInt32(reader[4]); // F
+                        Global.PuntajesFase1[5] = reader.IsDBNull(5) ? 0 : Convert.ToInt32(reader[5]); // L
+                        Global.PuntajesFase1[6] = reader.IsDBNull(6) ? 0 : Convert.ToInt32(reader[6]); // S
 
-                            // Obtener los valores de cada campo
-
-
-
-                            string campoA = reader.IsDBNull(1) ? "" : reader.GetValue(1).ToString();
-                            string campoE = reader.IsDBNull(2) ? "" : reader.GetValue(2).ToString();
-                            string campoC = reader.IsDBNull(3) ? "" : reader.GetValue(3).ToString();
-                            string campoS = reader.IsDBNull(4) ? "" : reader.GetValue(4).ToString();
-                            string campoD = reader.IsDBNull(5) ? "" : reader.GetValue(5).ToString();
-                            string campoF = reader.IsDBNull(6) ? "" : reader.GetValue(6).ToString();
-                            string campoL = reader.IsDBNull(7) ? "" : reader.GetValue(7).ToString();
-
-                            Global.SI_A = int.TryParse(campoA, out int valA) ? valA : 0;
-                            Global.SI_E = int.TryParse(campoE, out int valE) ? valE : 0;
-                            Global.SI_C = int.TryParse(campoC, out int valC) ? valC : 0;
-                            Global.SI_S = int.TryParse(campoS, out int valS) ? valS : 0;
-                            Global.SI_D = int.TryParse(campoD, out int valD) ? valD : 0;
-                            Global.SI_F = int.TryParse(campoF, out int valF) ? valF : 0;
-                            Global.SI_L = int.TryParse(campoL, out int valL) ? valL : 0;
-
-                            // Enviar los valores al Form2
-                            flowTITULO.Visible = false;
-                            abrirForm(new Resultados());
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Necesitas realizar el TEST", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        return true;
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
                 }
             }
         }
-
-        private void pictureBox4_Click_1(object sender, EventArgs e)
+        private bool CargarResultadosFase2(string usuario)
         {
-            flowTITULO.Visible = false;
-            abrirForm(new MAPA());
+            using (NpgsqlConnection conexion = Conexion.ConexionDB())
+            {
+                conexion.Open();
+
+                string query = @"
+            SELECT 
+                r1,r2,r3,r4,r5,r6,r7,r8,
+                r9,r10,r11,r12,r13,r14,r15,r16,
+                r17,r18,r19,r20,r21,r22,r23,r24,
+                r25,r26,r27,r28,r29,r30,r31,r32
+            FROM resultados_fase2
+            WHERE usuario = @usuario";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (!reader.Read())
+                            return false;
+
+                        Global.RespuestasUsuario = new int[32];
+
+                        for (int i = 0; i < 32; i++)
+                        {
+                            Global.RespuestasUsuario[i] = reader.IsDBNull(i)
+                                ? 0
+                                : Convert.ToInt32(reader.GetValue(i));
+                        }
+
+                        return true;
+                    }
+                }
+            }
+        }
+        private bool TieneResultadosFase1(string usuario)
+        {
+            using (NpgsqlConnection conexion = Conexion.ConexionDB())
+            {
+                conexion.Open();
+
+                string query = "SELECT COUNT(*) FROM resultados WHERE usuario = @usuario";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    int cantidad = Convert.ToInt32(cmd.ExecuteScalar());
+                    return cantidad > 0;
+                }
+            }
+        }
+        private bool ResultadosFase1Vacios()
+        {
+            for (int i = 0; i < Global.PuntajesFase1.Length; i++)
+            {
+                if (Global.PuntajesFase1[i] != 0)
+                    return false;
+            }
+
+            return true;
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(Global.usuario))
+                {
+                    MessageBox.Show("No hay un usuario activo.");
+                    return;
+                }
+
+                Global.ReiniciarFase1();
+
+                if (!TieneResultadosFase1(Global.usuario))
+                {
+                    MessageBox.Show("Primero debes realizar el test.");
+                    return;
+                }
+
+                if (!CargarResultadosFase1(Global.usuario))
+                {
+                    MessageBox.Show("No se pudieron cargar los resultados de Fase 1.");
+                    return;
+                }
+
+                if (ResultadosFase1Vacios())
+                {
+                    MessageBox.Show("Necesitas hacer el test.");
+                    return;
+                }
+
+                // ESTA PARTE ES LA QUE FALTABA
+                if (!CargarResultadosFase2(Global.usuario))
+                {
+                    MessageBox.Show("Falta completar la Fase 2 para poder calcular carreras.");
+                    return;
+                }
+
+                flowTITULO.Visible = false;
+
+                abrirForm(new FASE3());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar resultados: " + ex.Message);
+            }
         }
 
-        private void pictureBox5_Click_1(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
             flowTITULO.Visible = false;
             abrirForm(new Carreras());

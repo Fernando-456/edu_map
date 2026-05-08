@@ -1,317 +1,323 @@
-﻿using FontAwesome.Sharp;
-using MySql.Data.MySqlClient;
-using MySql.Data.MySqlClient;
-using Mysqlx.Crud;
-using System;
+﻿using EDUMAP.DAO;
+using Microsoft.Web.WebView2.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data;
 using System.Drawing;
-using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Windows.Forms;
 
 namespace EDUMAP
 {
     public partial class MAPA : Form
     {
-        string conexion = "Server=62.72.5.62;Database=EduMap;Uid=fer;Pwd=1234;";
-        string[] tablas = { "campo_artistico", "campo_emprendimiento", "campo_cientifico", "campo_desarrollo", "campo_leyes", "campo_finanzas", "campo_social" };
+        private bool mapaListo = false;
+        private bool combosCargados = false;
+        private string tipoSeleccionado = null;
+
+
         public MAPA()
         {
             InitializeComponent();
-            comboBoxmunicipio.DisplayMember = "";
-            comboBoxmunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-        
-        
-        private void MAPA_Load(object sender, EventArgs e)
-        {
-            CargarCarreras();
-            CargarMunicipios();
-            CargarUniversidades();
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-        }
-        private void CargarUniversidades()
+        private async void MAPA_Load(object sender, EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(conexion))
+            try
             {
-                con.Open();
-                string query = "SELECT nombre, ruta_imagen, pagina_web FROM universidades";
-
-                MySqlDataAdapter da = new MySqlDataAdapter(query, con);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                dataGridView2.DataSource = dt;
-
-                // Mostrar columnas bonitas
-                dataGridView2.Columns["nombre"].HeaderText = "Universidad";
-
-                // Ocultar la ruta de imagen (si no quieres verla en la tabla)
-                dataGridView2.Columns["ruta_imagen"].Visible = false;
-
-                // Mostrar el link
-                dataGridView2.Columns["pagina_web"].Visible = false;
-
+                combosCargados = false;
+                await InicializarMapaAsync();
+                CargarCombos();
+                combosCargados = true;
                 
             }
-        }
-        private void CargarCarreras()
-        {
-            using (MySqlConnection con = new MySqlConnection(conexion))
+            catch (Exception ex)
             {
-                con.Open();
-                string unionQuery = "";
-                for (int i = 0; i < tablas.Length; i++)
-                {
-                    unionQuery += $"SELECT Carrera FROM {tablas[i]} WHERE Carrera IS NOT NULL AND Carrera <> ''";
-
-                    if (i < tablas.Length - 1)
-                        unionQuery += " UNION ";
-                }
-                // Consulta final ordenada
-                string query = $@"
-                SELECT DISTINCT Carrera
-                FROM ({unionQuery}) AS todas
-                ORDER BY Carrera ASC;";
-
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                comboBoxcarreras.DataSource = dt;
-                comboBoxcarreras.DisplayMember = "Carrera";
-                comboBoxcarreras.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            }
-        }
-        private void CargarMunicipios()
-        {
-            using (MySqlConnection cn = new MySqlConnection(conexion))
-            {
-                cn.Open();
-                // Combinar todas las tablas pero sin duplicados
-                string query = string.Join(" UNION ", Array.ConvertAll(tablas, t => $"SELECT DISTINCT Municipio FROM {t}"));
-                MySqlCommand cmd = new MySqlCommand(query, cn);
-                MySqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    string municipio = dr["Municipio"].ToString();
-                    if (!comboBoxmunicipio.Items.Contains(municipio))
-                        comboBoxmunicipio.Items.Add(municipio);
-                }
-                dr.Close();
+                MessageBox.Show("Error al cargar MAPA: " + ex.Message);
             }
         }
 
-        private void FormResize()
+        private async Task InicializarMapaAsync()
         {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                // Ajustar el tamaño y la posición de los controles para pantalla maximizada
-            }
-            else
-            {
-                // Ajustar el tamaño y la posición de los controles para pantalla normal
-            }
+            await webViewMapa.EnsureCoreWebView2Async();
+            webViewMapa.CoreWebView2.NavigationCompleted += CoreWebView2_NavigationCompleted;
+
+            string rutaMapa = Path.Combine(Application.StartupPath, "mapa.html");
+
+            if (!File.Exists(rutaMapa))
+                throw new FileNotFoundException("No se encontró mapa.html");
+
+            webViewMapa.Source = new Uri(rutaMapa);
         }
 
-        private void MAPA_ResizeEnd(object sender, EventArgs e)
+        private void CoreWebView2_NavigationCompleted(object sender, CoreWebView2NavigationCompletedEventArgs e)
         {
-            FormResize();
+            mapaListo = e.IsSuccess;
         }
 
-
-        private void MostrarDatos()
+        private void CargarCombos()
         {
-            if (comboBoxcarreras.SelectedIndex == -1 || comboBoxmunicipio.SelectedIndex == -1)
-                return;
+            CargarComboEstados();
+            CargarComboUniversidades();
+            CargarComboCarreras();
+        }
 
-            string carrera = comboBoxcarreras.Text;
-            string municipio = comboBoxmunicipio.Text;
+        private void CargarComboEstados()
+        {
+            DataTable dt = UniversidadDAO.ObtenerEstados();
 
-            using (MySqlConnection cn = new MySqlConnection(conexion))
+            DataRow fila = dt.NewRow();
+            fila["id_estado"] = DBNull.Value;
+            fila["nombre"] = "Todos";
+            dt.Rows.InsertAt(fila, 0);
+
+            cmbEntidad.DataSource = dt;
+            cmbEntidad.DisplayMember = "nombre";
+            cmbEntidad.ValueMember = "nombre";
+            cmbEntidad.SelectedIndex = 0;
+        }
+
+        private void CargarComboUniversidades()
+        {
+            DataTable dt = UniversidadDAO.ObtenerUniversidadesCombo();
+
+            DataRow fila = dt.NewRow();
+            fila["id_universidad"] = DBNull.Value;
+            fila["nombre"] = "Todas";
+            dt.Rows.InsertAt(fila, 0);
+
+            cmbInstitucion.DataSource = dt;
+            cmbInstitucion.DisplayMember = "nombre";
+            cmbInstitucion.ValueMember = "nombre";
+            cmbInstitucion.SelectedIndex = 0;
+        }
+
+        private void CargarComboCarreras()
+        {
+            DataTable dt = UniversidadDAO.ObtenerCarrerasCombo();
+
+            DataRow fila = dt.NewRow();
+            fila["id_carrera"] = DBNull.Value;
+            fila["nombre"] = "Todas";
+            dt.Rows.InsertAt(fila, 0);
+
+            cmbAreaInteres.DataSource = dt;
+            cmbAreaInteres.DisplayMember = "nombre";
+            cmbAreaInteres.ValueMember = "nombre";
+            cmbAreaInteres.SelectedIndex = 0;
+        }
+
+        private FiltroUniversidad ObtenerFiltroActual()
+        {
+            return new FiltroUniversidad
             {
-                cn.Open();
-                string unionQuery = "";
+                Carrera = cmbAreaInteres.SelectedIndex <= 0 ? null : cmbAreaInteres.SelectedValue?.ToString(),
+                Universidad = cmbInstitucion.SelectedIndex <= 0 ? null : cmbInstitucion.SelectedValue?.ToString(),
+                Estado = cmbEntidad.SelectedIndex <= 0 ? null : cmbEntidad.SelectedValue?.ToString(),
+                Tipo = tipoSeleccionado
+            };
+        }
 
-                foreach (string tabla in tablas)
+        private async Task LimpiarMapa()
+        {
+            if (!mapaListo) return;
+            await webViewMapa.ExecuteScriptAsync("limpiarMarcadores()");
+        }
+
+        private async Task AgregarMarcadorMapa(double lat, double lng, string universidad, string detalle)
+        {
+            if (!mapaListo) return;
+
+            string uni = EscapeJs(universidad);
+            string det = EscapeJs(detalle);
+
+            string script =
+                $"agregarMarcador({lat.ToString(CultureInfo.InvariantCulture)}," +
+                $"{lng.ToString(CultureInfo.InvariantCulture)}," +
+                $"'{uni}','{det}')";
+
+            await webViewMapa.ExecuteScriptAsync(script);
+        }
+
+        private async Task ZoomMapa(double lat, double lng)
+        {
+            if (!mapaListo) return;
+
+            string script =
+                $"enfocarMarcador({lat.ToString(CultureInfo.InvariantCulture)}," +
+                $"{lng.ToString(CultureInfo.InvariantCulture)})";
+
+            await webViewMapa.ExecuteScriptAsync(script);
+        }
+
+        private string EscapeJs(string texto)
+        {
+            if (string.IsNullOrWhiteSpace(texto))
+                return string.Empty;
+
+            return texto
+                .Replace("\\", "\\\\")
+                .Replace("'", "\\'")
+                .Replace("\"", "\\\"")
+                .Replace("\r", "")
+                .Replace("\n", " ");
+        }
+
+        private async Task AplicarFiltros()
+        {
+            try
+            {
+
+                panelUniversidades.SuspendLayout();
+                panelUniversidades.Controls.Clear();
+                await LimpiarMapa();
+
+                FiltroUniversidad filtro = ObtenerFiltroActual();
+                DataTable tabla = UniversidadDAO.ObtenerUniversidadesFiltradas(filtro);
+
+                if (tabla.Rows.Count == 0)
                 {
-                    // Verificar si la tabla tiene coincidencias antes de incluirla
-                    string checkQuery = $"SELECT COUNT(*) FROM {tabla} WHERE Carrera=@carrera AND Municipio=@municipio";
-                    MySqlCommand checkCmd = new MySqlCommand(checkQuery, cn);
-                    checkCmd.Parameters.AddWithValue("@carrera", carrera);
-                    checkCmd.Parameters.AddWithValue("@municipio", municipio);
-                    long count = Convert.ToInt64(checkCmd.ExecuteScalar());
-
-                    if (count > 0)
-                    {
-                        if (unionQuery != "")
-                            unionQuery += " UNION ALL ";
-
-                        unionQuery += $@"
-                            SELECT 
-                                '{tabla}' AS tabla_origen,
-                                Carrera,
-                                Universidad,
-                                Municipio,
-                                Tipo_Universidad
-                            FROM {tabla}
-                            WHERE Carrera=@carrera AND Municipio=@municipio";
-                            
-                    }
-                }
-
-                if (unionQuery == "")
-                {
-                    MessageBox.Show("Pruebe con otro municipio y/o otra carrera");
-                    dataGridView1.DataSource = null;
+                    panelUniversidades.ResumeLayout();
+                    MessageBox.Show(
+                        "No se encontraron universidades con los filtros seleccionados.",
+                        "Información",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
                     return;
                 }
 
-                // Eliminar filas duplicadas de resultado final (por si hay repeticiones entre tablas)
-                string queryFinal = $"SELECT DISTINCT * FROM ({unionQuery}) AS todo";
+                foreach (DataRow row in tabla.Rows)
+                {
+                    if (row["latitud"] == DBNull.Value || row["longitud"] == DBNull.Value)
+                        continue;
 
-                MySqlCommand cmd = new MySqlCommand(queryFinal, cn);
-                cmd.Parameters.AddWithValue("@carrera", carrera);
-                cmd.Parameters.AddWithValue("@municipio", municipio);
+                    double lat = Convert.ToDouble(row["latitud"]);
+                    double lng = Convert.ToDouble(row["longitud"]);
+                    string universidad = row["universidad"].ToString();
+                    string carrera = row["carrera"].ToString();
+                    string tipo = row["tipo"].ToString();
 
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                    await AgregarMarcadorMapa(lat, lng, universidad, $"{tipo} - {carrera}");
 
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns["tabla_origen"].Visible = false;
+                    var card = CrearCard(row);
+                    panelUniversidades.Controls.Add(card);
+                }
 
-
+                panelUniversidades.ResumeLayout();
+            }
+            catch (Exception ex)
+            {
+                panelUniversidades.ResumeLayout();
+                MessageBox.Show("Error al aplicar filtros: " + ex.Message);
             }
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+        private cardUniversidades CrearCard(DataRow row)
         {
-            MostrarDatos();
-        }
+            cardUniversidades card = new cardUniversidades();
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            string universidad = row["universidad"].ToString();
+            string carrera = row["carrera"].ToString();
+            string tipo = row["tipo"].ToString();
 
-        }
+            string paginaWeb = row["pagina_web"] == DBNull.Value
+            ? ""
+            : row["pagina_web"].ToString();
 
-        private void comboBoxmunicipio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxmunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
-            
-            MostrarDatos();
-        }
+            card.CargarDatos(universidad, tipo, carrera, paginaWeb);
 
+            card.CargarDatos(universidad, tipo, carrera, paginaWeb);
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-               
-        }
+            card.Latitud = Convert.ToDouble(row["latitud"]);
+            card.Longitud = Convert.ToDouble(row["longitud"]);
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
+            card.CardClick += async (s, e) =>
             {
-                string ruta = dataGridView2.Rows[e.RowIndex].Cells["ruta_imagen"].Value.ToString();
-                string link = dataGridView2.Rows[e.RowIndex].Cells["pagina_web"].Value.ToString();
+                await ZoomMapa(card.Latitud, card.Longitud);
+            };
 
-                if (!string.IsNullOrEmpty(ruta))
-                {
-                    try
-                    {
-                        using (WebClient web = new WebClient())
-                        {
-                            byte[] datos = web.DownloadData(ruta);
-                            using (var ms = new System.IO.MemoryStream(datos))
-                            {
-                                pictureBox1.Image = Image.FromStream(ms);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al cargar la imagen: " + ex.Message);
-                    }
-                }
-                // Verificar si es número de teléfono
-                if (EsTelefono(link))
-                {
-                    MessageBox.Show("Número telefónico: " + link, "NO TIENE PAGINA",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return; // NO intenta abrir navegador ni cargar imagen
-                }
-                if (EsUrl(link))
-                {
-                    linkLabel1.Visible = true;
-                    // --- MOSTRAR LINK ---
-                    linkLabel1.Text = link;
-                    linkLabel1.Links.Clear();
-                    linkLabel1.Links.Add(0, link.Length, link);
-                    return;
-                }
-                
+            return card;
+        }
+
+        private async void btnTodas_Click(object sender, EventArgs e)
+        {
+            tipoSeleccionado = null;
+            await AplicarFiltros();
+        }
+
+        
+
+        private void btnLimpiarFiltros_Click(object sender, EventArgs e)
+        {
+            cmbAreaInteres.SelectedIndex = 0;
+            cmbInstitucion.SelectedIndex = 0;
+            cmbEntidad.SelectedIndex = 0;
+            tipoSeleccionado = null;
+        }
+
+        private async void cmbAreaInteres_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!combosCargados) return;
+            await AplicarFiltros();
+        }
+
+        private async void cmbInstitucion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!combosCargados) return;
+            await AplicarFiltros();
+        }
+
+        private async void cmbEntidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!combosCargados) return;
+            await AplicarFiltros();
+        }
+
+        private async void btnPublico_Click(object sender, EventArgs e)
+        {
+            tipoSeleccionado = "Pública";
+            await AplicarFiltros();
+        }
+
+        private async void btnPrivado_Click(object sender, EventArgs e)
+        {
+            tipoSeleccionado = "Privada";
+            await AplicarFiltros();
+        }
+
+        private async void btnAplicarFiltros_Click_1(object sender, EventArgs e)
+        {
+            await AplicarFiltros();
+        }
+        private Form FormActual = null;
+        private void abrirForm(Form form)
+        {
+            if (FormActual != null)
+            {
+                FormActual.Close();
             }
-            
 
+            FormActual = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add(form);
+            panel1.Tag = form;
+            form.BringToFront();
+            form.Show();
         }
-        private bool EsTelefono(string texto)
+        private void button1_Click(object sender, EventArgs e)
         {
-            // Quita espacios y guiones
-            string limpio = texto.Replace(" ", "").Replace("-", "");
-
-            // Si empieza con + y el resto son dígitos
-            if (limpio.StartsWith("+"))
-                return limpio.Substring(1).All(char.IsDigit);
-
-            // Si no tiene + pero son puros dígitos
-            return limpio.All(char.IsDigit);
-        }
-        private bool EsUrl(string ruta)
-        {
-            return ruta.StartsWith("http://") ||
-                   ruta.StartsWith("https://");
-        }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
-            linkLabel1.LinkVisited = true;
-            string url = e.Link.LinkData.ToString();
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = url,
-                UseShellExecute = true
-            });
+            abrirForm(new Menu());
         }
     }
 }
